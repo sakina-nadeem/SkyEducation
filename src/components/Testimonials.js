@@ -1,28 +1,43 @@
 import React, { useState } from "react";
-import userImg from "../Assests/testimonial-user.png"; 
+import userImg from "../Assests/client1.jpg";
+import client2Img from "../Assests/client2.jpg";
+import client3Img from "../Assests/client3.jpg";
+import client4Img from "../Assests/client4.jpg";
 import leftArrow from "../Assests/backwardicon.png";
 import rightArrow from "../Assests/forwardicon.png";
 import invertedcommas from "../Assests/invertedcommas.png";
 import endinvertedcommas from "../Assests/endinginvertedcommas.png";
 
-import "./testimonials.css"
+import "./testimonials.css";
 
 const testimonials = [
   {
     id: 1,
-    name: "Eleysa Anthony",
+    name: "Maya Santos",
     role: "Student",
-    title: "Supportive instructors, real-world skills.",
-    text: "I loved the supportive instructors and practical lessons that prepared me for real-world challenges.",
+    text: "The courses where engaging and well-strctured. Making Learning Enjoyable!",
     img: userImg,
   },
   {
     id: 2,
-    name: "John Doe",
-    role: "Graduate",
-    title: "Life-changing experience!",
-    text: "The course gave me confidence and industry-ready skills that I use every day in my career.",
-    img: userImg,
+    name: "Jake Paulin",
+    role: "Student",
+    text: "I loved the supportive instrctuors and practical approach to learning.",
+    img: client2Img,
+  },
+  {
+    id: 3,
+    name: "Nick Adalman",
+    role: "Student",
+    text: "A fantastic learning experience! The flexible schedule allowed me to balance my studies with work.",
+    img: client3Img,
+  },
+  {
+    id: 4,
+    name: "Phoebe Smith",
+    role: "Student",
+    text: "The Platform give me the flexibility to learn at my own pace.",
+    img: client4Img,
   },
 ];
 
@@ -119,9 +134,6 @@ const Testimonials = () => {
           </button>
         </div>
       </div>
-
-      
-      
     </section>
   );
 };

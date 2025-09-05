@@ -4,39 +4,39 @@ import crossicon from "../Assests/crossicon.svg";
 
 const faqData = [
   {
-    question: "Where courses are available?",
+    question: "What types of courses does Sky Education offer?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla.",
+      "We offer a wide range of courses in health, beauty, public services, and education, from beginner to advanced levels.",
   },
   {
-    question: "Where courses are available?",
+    question: "Are the courses online or in-person?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla.",
+      "Most of our courses are available online with flexible learning options, while some practical sessions may require in-person attendance.",
   },
   {
-    question: "Where courses are available?",
+    question: "Do I need any prior qualifications to enroll?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla.",
+      "Entry requirements vary by course. Many beginner courses require no prior experience, while advanced levels may need relevant qualifications.",
   },
   {
-    question: "Where courses are available?",
+    question: "Will I receive a certificate after completing a course?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla.",
+      "Yes, all our courses provide industry-recognized certificates upon successful completion.",
   },
   {
-    question: "Where courses are available?",
+    question: "Can I study at my own pace?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla.",
+      "Yes! Our online courses are designed to be flexible so you can balance learning with your personal and professional commitments.",
   },
   {
-    question: "Where courses are available?",
+    question: "How do I enroll in a course?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla.",
+      "You can easily enroll by visiting our course page, selecting your desired program, and following the step-by-step registration process.",
   },
   {
-    question: "Where courses are available?",
+    question: "Do you offer student support during the course?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla.",
+      "Yes, our dedicated support team and instructors are available to guide you throughout your learning journey.",
   },
   
 ];

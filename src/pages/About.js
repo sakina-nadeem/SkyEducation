@@ -15,8 +15,8 @@ const About = () => {
             className="fw-bold playfair-display-custom mb-3"
             style={{ color: "rgba(2, 174, 241, 1)" }}
           >
-           Shaping Careers Through 
-            <br /> Quality Education
+            Exceptional training across health,
+            <br /> beauty, and public services.
           </h2>
           <p className="text-muted mb-0">
             Empowering students with practical skills for successful careers.

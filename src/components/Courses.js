@@ -11,7 +11,7 @@ const CoursesSection = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [startIndex, setStartIndex] = useState(0);
 
-  const categories = ["ALL", "QUALIFI", "VTCT", "PERSONS", "PRO QUAL", "SQA", "ICQ"];
+  const categories = ["ALL", "SEG", "VTCT", "PERSONS", "PRO QUAL", "SQA", "ICQ"];
 
   // get courses based on selected category
   const courses = courseData[activeCategory] || [];
@@ -50,7 +50,7 @@ const CoursesSection = () => {
           Discover the Right Course for You
         </h2>
         <p className="text-muted">
-          Lorem ipsum dolor sit amet consectetur. Eu quis enim tempor et proin neque.
+         Enhance your skills with industry-recognized courses designed for your success.
         </p>
 
         {/* Category Buttons */}
