@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Form, Button, InputGroup } from "react-bootstrap";
-import aboutimg00 from "../Assests/aboutimg00.png";
+import aboutimg00 from "../Assests/newsletter.jpg";
 import mailcon from "../Assests/mailicon.png";
 
 function Newsletter() {

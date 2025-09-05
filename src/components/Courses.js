@@ -98,7 +98,7 @@ const CoursesSection = () => {
                         className="text-primary d-flex align-items-center gap-1"
                         style={{ fontSize: "12px" }}
                       >
-                        <img src={starIcon} alt="star" width="14" height="14" />{" "}
+                       
                         {course.rating}
                       </span>
                       <span>
