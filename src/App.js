@@ -15,8 +15,9 @@ import Footer from "./components/Footer";
 
 // Pages
 import AboutUsPage from "./pages/About";
-import FaqPage from "./pages/Faqs";   // dedicated about page
-// you can also create src/pages/FaqPage.js and BlogPage.js if you want
+import FaqPage from "./pages/Faqs";
+import CoursesPage from "./pages/Courses";
+import EnrollmentPage from "./pages/Enrollment";
 
 const App = () => {
   return (
@@ -46,6 +47,12 @@ const App = () => {
 
         {/* FAQ Page */}
         <Route path="/faqs" element={<FaqPage />} />
+
+        {/* Courses Page */}
+        <Route path="/courses" element={<CoursesPage />} />
+
+        {/* Enrollment Page */}
+        <Route path="/enroll" element={<EnrollmentPage />} />
        
       </Routes>
     </Router>
