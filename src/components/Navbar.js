@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import logo from "../Assests/logo00.png";
 import "./home.css";
 
@@ -7,9 +8,15 @@ function NavigationBar() {
   const [showCourses, setShowCourses] = useState(false);
 
   return (
-    <Navbar expand="lg" bg="white" fixed="top" className="shadow-sm py-2 px-lg-5">
+    <Navbar
+      expand="lg"
+      bg="white"
+      fixed="top"
+      className="shadow-sm py-2 px-lg-5"
+    >
       <Container fluid className="px-4">
-        <Navbar.Brand href="#home" className="logo">
+        {/* Logo goes to Home */}
+        <Navbar.Brand as={Link} to="/" className="logo">
           <img
             src={logo}
             alt="Logo"
@@ -26,12 +33,9 @@ function NavigationBar() {
         {/* Menu Items */}
         <Navbar.Collapse id="navbar-nav" className="justify-content-end">
           <Nav className="align-items-lg-center fw-semibold custom-nav gap-2">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About Us</Nav.Link>
-            <Nav.Link href="#faq">FAQ</Nav.Link>
-            <Nav.Link href="#blog">Blog</Nav.Link>
-
-            {/* Dropdown on hover */}
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/about">About Us</Nav.Link>
+            <Nav.Link as={Link} to="/faqs">FAQ</Nav.Link>
             <NavDropdown
               id="courses-dropdown"
               title={<span className="fw-bold">Courses</span>}
@@ -40,8 +44,8 @@ function NavigationBar() {
               onMouseLeave={() => setShowCourses(false)}
               onClick={() => setShowCourses(!showCourses)}
             >
-              <NavDropdown.Item href="#courses">Course 1</NavDropdown.Item>
-              <NavDropdown.Item href="#courses">Course 2</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/course1">Course 1</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/course2">Course 2</NavDropdown.Item>
             </NavDropdown>
 
             {/* Buttons */}
