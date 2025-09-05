@@ -1,46 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import "./aboutus.css"; // We will move custom CSS here
+import "./aboutus.css"; 
 import "../components/about.css";
 import Tesimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 
 const About = () => {
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     // Initialize AOS
     AOS.init({ duration: 1000, once: true, offset: 100 });
-
-    // Simulate loading
-    setTimeout(() => setLoading(false), 2000);
   }, []);
 
   // Particles init
   const particlesInit = async (main) => {
     await loadFull(main);
   };
-
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  if (loading) {
-    return (
-      <div className="d-flex vh-100 align-items-center justify-content-center">
-        <div className="text-center">
-          <div className="spinner-border text-primary mb-3" role="status"></div>
-          <h3>Loading Sky Education...</h3>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div>
@@ -136,6 +113,7 @@ const About = () => {
         </div>
       </section>
 
+      {/* About Section */}
       <section
         className="py-5"
         style={{ backgroundColor: "#02AEF126", marginTop: "160px" }}
@@ -156,7 +134,7 @@ const About = () => {
             </p>
           </div>
 
-          {/* Content - Centered without images */}
+          {/* Content */}
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-10 text-center">
               <p className="mb-4">
