@@ -7,12 +7,15 @@ import "./home.css";
 
 function Hero() {
   return (
-    <section className="hero-section text-light d-flex align-items-center position-relative ">
+    <section
+      className="hero-section text-light d-flex align-items-center position-relative"
+      style={{ backgroundColor: "#02AEF1", width: "100vw", marginLeft: "calc(-50vw + 50%)" }} // 👈 updated styles
+    >
       <Container className="pt-5">
         <Row className="align-items-center overflow-hidden">
           <Col md={7}>
             <small
-              className="text-uppercase d-flex align-items-center ls-1 "
+              className="text-uppercase d-flex align-items-center ls-1"
               style={{ fontSize: "11px" }}
             >
               <img
@@ -23,7 +26,7 @@ function Hero() {
               Learning, Education, Training
             </small>
 
-            <h1 className="display-5 fw-bold mt-2  playfair-display-custom">
+            <h1 className="display-5 fw-bold mt-2 playfair-display-custom">
               Sky Education <br /> Manchester Reach <br /> For the Sky
             </h1>
             <p className="mt-3" style={{ fontSize: "12px" }}>
@@ -35,7 +38,7 @@ function Hero() {
 
           {/* Updated Search Box */}
           <div
-            className=" d-flex align-items-center justify-content-between bg-white shadow-sm px-2 px-sm-5 py-4 py-md-2 w-100  my-4 search-box overflow-hidden"
+            className="d-flex align-items-center justify-content-between bg-white shadow-sm px-2 px-sm-5 py-4 py-md-2 w-100 my-4 search-box overflow-hidden"
             style={{ maxWidth: "75%" }}
           >
             {/* Course Category */}
@@ -70,7 +73,7 @@ function Hero() {
 
             {/* Course Name */}
             <div
-              className="d-flex flex-column px-2 ms-sm-2 mb-2 mb-sm-0 "
+              className="d-flex flex-column px-2 ms-sm-2 mb-2 mb-sm-0"
               style={{ minWidth: "230px", width: "280px" }}
             >
               <label className="blue mb-1 text-start fw-semibold">
