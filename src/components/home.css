@@ -1,0 +1,247 @@
+
+.playfair-display-custom {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.blue{
+    color: #02AEF1;
+}
+
+
+/* navbar custom styling (underlining navlinks on hover) */
+
+.logo:hover{
+  transform: scale(1.05);
+  transition: all 1s ease-in-out;
+}
+
+.custom-nav .nav-link {
+  position: relative;
+  color: #212529;
+  transition: all 0.2s ease;
+}
+
+.custom-nav .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 3px;
+  width: 90%;
+  height: 2px;
+  background-color: #02aef1;
+  transition: all 1s ease;
+}
+
+#courses-dropdown.nav-link:hover::after {
+  content: none !important;
+}
+
+/* Shared button styles */
+.login-btn,
+.signup-btn {
+  transition: all 1s ease-in-out;
+  transform: scale(1);
+}
+
+/* Hover effect with scale */
+.login-btn:hover,
+.signup-btn:hover {
+  transform: scale(1.05); 
+}
+
+/* Darken the blue button on hover */
+.signup-btn:hover {
+  background-color: #0295d3 !important; 
+}
+
+
+
+/* hero custom styling */
+.hero-section {
+  min-height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mobile: gradient top→bottom + bg image full width */
+@media (max-width: 767.98px) {
+  .hero-section {
+    background: linear-gradient(
+        180deg,
+        rgba(2, 174, 241, 1) 0%,
+        rgba(2, 174, 241, 0.75) 30%,
+        rgba(2, 174, 241, 0.2) 60%,
+        rgba(2, 174, 241, 0) 100%
+      ),
+      url("../Assests/herobg.png");
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Desktop: gradient left→right + bg image on right */
+@media (min-width: 768px) {
+  .hero-section {
+    background: linear-gradient(
+        90deg,
+        rgba(2, 174, 241, 1) 0%,
+        rgba(2, 174, 241, 0.9) 25%,
+        rgba(2, 174, 241, 0.6) 50%,
+        rgba(2, 174, 241, 0.3) 70%,
+        rgba(2, 174, 241, 0.05) 85%,
+        rgba(2, 174, 241, 0) 100%
+      ),
+      url("../Assests/herobg.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #02aef1;
+  }
+}
+/* Default Search Box */
+.search-box {
+  align-items: center !important;
+  width: 75%; 
+  max-width: 75%;
+  border-radius: 50px;
+
+}
+
+/* Equal sizing for each input div */
+.search-box > div {
+  min-width: 230px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Input wrapper */
+.search-input-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Input styling */
+.search-input {
+  font-size: 1rem; 
+}
+
+.search-input::placeholder {
+  font-size: 0.75rem;
+  color: #6c757d; /* gray-600 */
+}
+
+/* Search button */
+.search-btn {
+  align-self: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  height: 36px;
+}
+
+.search-btn {
+  transition: all 0.7s ease-in-out;
+  transform: scale(1);
+  background-color: #02AEF1 !important; /* base blue */
+  color: white;
+}
+
+/* Hover effect */
+.search-btn:hover {
+  background-color: #0295d3 !important; 
+  transform: scaleX(1.05); 
+}
+
+
+/* For medium and below (≤ md) make full width */
+@media (max-width: 991.98px) {
+  .search-box {
+    width: 95% !important;
+    max-width: 95% !important;
+    margin-inline: auto !important;
+
+  }
+}
+
+/* For small and below (≤ sm) stack items */
+@media (max-width: 767.98px) {
+  .search-box {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem;
+    
+  }
+
+  .search-box > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .search-box .btn {
+    width: 100%;
+    margin-top: 0.5rem; 
+  }
+}
+
+
+/* partner styling */
+.partner-logo-img {
+  height: 50px;
+  width: auto;
+  padding: 0 10px;
+  transition: all 1s ease;
+}
+
+.partner-logo-img:hover {
+  transform: scale(1.08); 
+}
+
+.partner-nav-btn {
+  background: none;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+}
+
+.partner-nav-icon {
+  width: 15px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+/* Small screens */
+@media (max-width: 767.98px) {
+  .partner-logo-img {
+    height: 35px !important;
+    padding: 0 4px !important;
+  }
+
+  .partner-nav-icon {
+    width: 12px !important;
+    padding: 2px;
+  }
+
+  .partner-logos-container {
+    gap: 10px;
+  }
+}
+

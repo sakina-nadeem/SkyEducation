@@ -1,0 +1,31 @@
+.about-text {
+  color: #7C7C7C;
+  font-size: 18px;
+  font-weight: 400;
+  .LearnButton{
+    transition: transform 0.7s ease;
+  }
+
+  .LearnButton:hover{
+    transform: scale(1.05);
+    background-color: #029ee0 !important;
+  }
+}
+
+/* Image corner rounding */
+.rounded-top-right {
+  border-top-right-radius: 15px;
+}
+
+.rounded-bottom-right {
+  border-bottom-right-radius: 15px;
+}
+
+.LearnButton{
+  transition: transform 0.7s ease;
+}
+
+.LearnButton:hover{
+  transform: scale(1.05);
+  background-color: #029ee0 !important;
+}
