@@ -6,7 +6,6 @@ import { loadFull } from "tsparticles";
 import "./aboutus.css"; // We will move custom CSS here
 import "../components/about.css";
 import Tesimonials from "../components/Testimonials";
-import Footer from "../components/Footer";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -133,6 +132,13 @@ const About = () => {
               </p>
             </div>
           </div>
+
+          <button
+            className="btn btn-primary mt-5"
+            onClick={() => scrollToSection("testimonials")}
+          >
+            Explore Programs
+          </button>
         </div>
       </section>
 

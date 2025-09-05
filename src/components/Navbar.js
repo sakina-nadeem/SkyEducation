@@ -36,6 +36,8 @@ function NavigationBar() {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About Us</Nav.Link>
             <Nav.Link as={Link} to="/faqs">FAQ</Nav.Link>
+
+            {/* Courses Dropdown */}
             <NavDropdown
               id="courses-dropdown"
               title={<span className="fw-bold">Courses</span>}
@@ -44,8 +46,34 @@ function NavigationBar() {
               onMouseLeave={() => setShowCourses(false)}
               onClick={() => setShowCourses(!showCourses)}
             >
-              <NavDropdown.Item as={Link} to="/courses/course1">Course 1</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/courses/course2">Course 2</NavDropdown.Item>
+              {/* Replace these with all the courses from your screenshot */}
+              <NavDropdown.Item as={Link} to="/courses/laser-hair-removal">
+                Laser Hair Removal
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/microblading">
+                Microblading
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/skin-rejuvenation">
+                Skin Rejuvenation
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/dermaplaning">
+                Dermaplaning
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/lip-filler">
+                Lip Filler
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/anti-wrinkle">
+                Anti-Wrinkle Injections
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/vtct">
+                VTCT Accredited Courses
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/proqual">
+                ProQual Accredited Courses
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/courses/qualifi">
+                Qualifi Accredited Courses
+              </NavDropdown.Item>
             </NavDropdown>
 
             {/* Buttons */}
