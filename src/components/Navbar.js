@@ -45,40 +45,34 @@ function NavigationBar() {
               onClick={() => setShowCourses(!showCourses)}
               className="courses-mega-dropdown"
             >
-              <div className="mega-dropdown-content p-4">
+              <div className="mega-dropdown-content p-2">
                 <div className="row">
                   <div className="col-md-6">
-                    <h6 className="dropdown-header text-primary fw-bold mb-3">
+                    <h6 className="dropdown-header text-primary fw-bold mb-1">
                       <i className="fas fa-graduation-cap me-2"></i>
                       Browse by Category
                     </h6>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item mb-2">
+                    <NavDropdown.Item as={Link} to="/courses" className="category-item">
                       <div className="d-flex align-items-center">
-                        <div className="category-icon me-3">
-                          <i className="fas fa-car text-primary"></i>
-                        </div>
+                       
                         <div className="flex-grow-1">
                           <div className="fw-semibold">Automotive & MOT</div>
                           <small className="text-muted">Professional vehicle testing</small>
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item mb-2">
+                    <NavDropdown.Item as={Link} to="/courses" className="category-item">
                       <div className="d-flex align-items-center">
-                        <div className="category-icon me-3">
-                          <i className="fas fa-spa text-success"></i>
-                        </div>
+                     
                         <div className="flex-grow-1">
                           <div className="fw-semibold">Beauty & Aesthetics</div>
                           <small className="text-muted">VTCT & ITEC qualifications</small>
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item mb-2">
+                    <NavDropdown.Item as={Link} to="/courses" className="category-item">
                       <div className="d-flex align-items-center">
-                        <div className="category-icon me-3">
-                          <i className="fas fa-book text-info"></i>
-                        </div>
+                       
                         <div className="flex-grow-1">
                           <div className="fw-semibold">English & Math</div>
                           <small className="text-muted">Foundation to advanced levels</small>
@@ -87,9 +81,7 @@ function NavigationBar() {
                     </NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/courses" className="category-item">
                       <div className="d-flex align-items-center">
-                        <div className="category-icon me-3">
-                          <i className="fas fa-shield-alt text-warning"></i>
-                        </div>
+                       
                         <div className="flex-grow-1">
                           <div className="fw-semibold">Security & Safety</div>
                           <small className="text-muted">Professional certifications</small>
@@ -98,44 +90,38 @@ function NavigationBar() {
                     </NavDropdown.Item>
                   </div>
                   <div className="col-md-6">
-                    <h6 className="dropdown-header text-primary fw-bold mb-3">
+                    <h6 className="dropdown-header text-primary fw-bold mb-1">
                       <i className="fas fa-star me-2"></i>
                       Popular Courses
                     </h6>
-                    <NavDropdown.Item as={Link} to="/courses" className="popular-item mb-2">
+                    <NavDropdown.Item as={Link} to="/courses" className="popular-item">
                       <div className="d-flex align-items-center">
-                        <div className="popular-badge me-3">
-                          <i className="fas fa-fire text-danger"></i>
-                        </div>
+                        
                         <div className="flex-grow-1">
                           <div className="fw-semibold">Level 4 Laser & IPL</div>
                           <small className="text-success">Most Popular</small>
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="popular-item mb-2">
+                    <NavDropdown.Item as={Link} to="/courses" className="popular-item">
                       <div className="d-flex align-items-center">
-                        <div className="popular-badge me-3">
-                          <i className="fas fa-chart-line text-info"></i>
-                        </div>
+                       
                         <div className="flex-grow-1">
                           <div className="fw-semibold">MOT Class 4 & 7</div>
                           <small className="text-info">High Demand</small>
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="popular-item mb-2">
+                    <NavDropdown.Item as={Link} to="/courses" className="popular-item">
                       <div className="d-flex align-items-center">
-                        <div className="popular-badge me-3">
-                          <i className="fas fa-trophy text-warning"></i>
-                        </div>
+                       
                         <div className="flex-grow-1">
                           <div className="fw-semibold">Level 3 Education & Training</div>
                           <small className="text-warning">Trending</small>
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <div className="mt-3">
+                    <div className="mt-2">
                       <NavDropdown.Item as={Link} to="/courses" className="view-all-btn">
                         <div className="text-center p-2 bg-primary text-white rounded">
                           <i className="fas fa-arrow-right me-2"></i>
