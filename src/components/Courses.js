@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import starIcon from "../Assests/staricon.png";   
 import fileIcon from "../Assests/fileregicon.png";   
 import forwardIcon from "../Assests/forwardicon.png";  
@@ -10,6 +11,7 @@ import "./courses.css";
 const CoursesSection = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [startIndex, setStartIndex] = useState(0);
+  const navigate = useNavigate();
 
   const categories = ["ALL", "SEG", "VTCT", "PERSONS", "PRO QUAL", "SQA", "ICQ"];
 
@@ -34,6 +36,11 @@ const CoursesSection = () => {
     if (startIndex + itemsPerPage < courses.length) {
       setStartIndex(startIndex + itemsPerPage);
     }
+  };
+
+  // handle enrollment navigation
+  const handleEnrollClick = (course) => {
+    navigate('/enroll', { state: { course } });
   };
 
   return (
@@ -128,7 +135,10 @@ const CoursesSection = () => {
                       <img src={fileIcon} alt="file" width="10" height="14" />{" "}
                       {course.desc}
                     </p>
-                    <button className=" w-100 enroll-btn playfair-display-custom fw-medium py-2">
+                    <button 
+                      className="w-100 enroll-btn playfair-display-custom fw-medium py-2"
+                      onClick={() => handleEnrollClick(course)}
+                    >
                       ENROLL NOW
                     </button>
                   </div>
