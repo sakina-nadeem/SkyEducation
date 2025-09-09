@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Form, Button, InputGroup } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import logo from "../Assests/logo01.png";
 import facebookIcon from "../Assests/facebook-icon.png";
@@ -40,7 +41,7 @@ const Footer = () => {
                 opacity: "0.9",
               }}
             >
-              <strong className="text-dark">Phone: </strong>0161 526 5555
+              <strong className="text-dark">Phone: </strong>07507 500507
             </p>
             <p
               className=" mb-1"
@@ -87,14 +88,14 @@ const Footer = () => {
             <h5 className="fw-bold mb-3 playfair-display-custom">Quick Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#about" className="footer-link">
+                <Link to="/about" className="footer-link">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#courses" className="footer-link">
+                <Link to="/courses" className="footer-link">
                   Courses
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#blog" className="footer-link">
@@ -102,9 +103,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="footer-link">
+                <Link to="/contact" className="footer-link">
                   Contact Us
-                </a>
+                </Link>
               </li>
               
             </ul>
@@ -120,19 +121,19 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#terms" className="footer-link">
+                <Link to="/terms" className="footer-link">
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#privacy" className="footer-link">
+                <Link to="/privacy" className="footer-link">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="footer-link">
+                <Link to="/faqs" className="footer-link">
                   FAQ
-                </a>
+                </Link>
               </li> 
             </ul>
           </Col>

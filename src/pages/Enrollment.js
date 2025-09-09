@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Form, Button, Alert } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import contactImg from "../Assests/contactimg.png";
 import mailIcon from "../Assests/mailicon.png";
@@ -87,16 +87,6 @@ const EnrollmentPage = () => {
                     <h5 className="fw-bold text-dark mb-2">Selected Course</h5>
                     <h4 className="text-primary mb-2">{courseData.title}</h4>
                     <p className="text-muted mb-3">{courseData.desc}</p>
-                    <div className="d-flex justify-content-center align-items-center gap-4">
-                      <span className="fw-bold text-success fs-5">${courseData.price}</span>
-                      <small className="text-decoration-line-through text-muted">
-                        ${courseData.oldPrice}
-                      </small>
-                      <div className="d-flex align-items-center gap-1">
-                        <span className="text-warning">★</span>
-                        <span className="fw-medium">{courseData.rating}</span>
-                      </div>
-                    </div>
                   </Card.Body>
                 </Card>
               </div>
@@ -134,8 +124,8 @@ const EnrollmentPage = () => {
                       <h6 className="fw-bold mb-0">Phone</h6>
                     </div>
                     <p className="text-muted ms-4">
-                      <a href="tel:+441234567890" className="text-decoration-none text-muted">
-                        +44 123 456 7890
+                      <a href="tel:+447507500507" className="text-decoration-none text-muted">
+                        07507 500507
                       </a>
                     </p>
                   </div>
@@ -334,9 +324,9 @@ const EnrollmentPage = () => {
                         label={
                           <span>
                             I agree to the{" "}
-                            <a href="#" className="text-primary">Terms and Conditions</a>
+                            <Link to="/terms" className="text-primary text-decoration-none">Terms and Conditions</Link>
                             {" "}and{" "}
-                            <a href="#" className="text-primary">Privacy Policy</a> *
+                            <Link to="/privacy" className="text-primary text-decoration-none">Privacy Policy</Link> *
                           </span>
                         }
                         required

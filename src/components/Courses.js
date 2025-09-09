@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import starIcon from "../Assests/staricon.png";   
+   
 import fileIcon from "../Assests/fileregicon.png";   
 import forwardIcon from "../Assests/forwardicon.png";  
 import backwardIcon from "../Assests/backwardicon.png";  
@@ -66,8 +66,12 @@ const CoursesSection = () => {
             <button
               key={cat}
               onClick={() => {
-                setActiveCategory(cat);
-                setStartIndex(0); // reset to first page when category changes
+                if (cat === "VTCT") {
+                  window.open("https://sky-aesthetic.vercel.app/", "_blank");
+                } else {
+                  setActiveCategory(cat);
+                  setStartIndex(0); // reset to first page when category changes
+                }
               }}
               className={`btn px-3 py-2 fw-lighter ${
                 activeCategory === cat ? "active-btn " : "inactive-btn border-dark "
@@ -80,7 +84,7 @@ const CoursesSection = () => {
         </div>
 
         {/* Courses Grid with navigation icons */}
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center justify-content-center">
           {/* Backward Icon */}
           <button
             className="nav-btn me-2 me-lg-5"
@@ -90,54 +94,66 @@ const CoursesSection = () => {
             <img src={backwardIcon} alt="Previous" width="12" />
           </button>
 
-          <div className="row g-4 flex-grow-1">
+          <div className="row g-3 flex-grow-1 justify-content-center">
             {visibleCourses.map((course) => (
-              <div key={course.id} className="col-lg-3 col-md-6 col-6">
-                <div className="card h-100 shadow-sm border rounded-4">
-                  <img
-                    src={course.img}
-                    className="card-img-top rounded-top-4"
-                    alt={course.title}
-                  />
-                  <div className="card-body text-start">
-                    <div className="d-flex justify-content-between align-items-center mb-2">
-                      <span
-                        className="text-primary d-flex align-items-center gap-1"
-                        style={{ fontSize: "12px" }}
-                      >
-                       
-                        {course.rating}
-                      </span>
-                      <span>
-                        <span style={{ color: "#FF0000", fontSize: "14px" }}>
-                          ${course.price}
-                        </span>{" "}
-                        <small
-                          className="text-decoration-line-through opacity-50"
-                          style={{ color: "#7C7C7C", fontSize: "12px" }}
-                        >
-                          ${course.oldPrice}
-                        </small>
-                      </span>
-                    </div>
+              <div key={course.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div className="card h-100 shadow-sm border rounded-4" style={{ maxWidth: "300px", margin: "0 auto" }}>
+                  <div className="position-relative" style={{ height: "200px", overflow: "hidden" }}>
+                    <img
+                      src={course.img}
+                      className="card-img-top rounded-top-4"
+                      alt={course.title}
+                      style={{ 
+                        width: "100%", 
+                        height: "100%", 
+                        objectFit: "cover",
+                        objectPosition: "center"
+                      }}
+                    />
+                  </div>
+                  <div className="card-body text-start d-flex flex-column" style={{ padding: "15px" }}>
                     <h6
-                      className="fw-bold playfair-display-custom text-dark"
-                      style={{ fontSize: "15px" }}
+                      className="fw-bold playfair-display-custom text-dark mb-2"
+                      style={{ 
+                        fontSize: "14px", 
+                        lineHeight: "1.3",
+                        height: "40px",
+                        overflow: "hidden",
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical"
+                      }}
                       title={course.title}
                     >
                       {course.title}
                     </h6>
                     <p
-                      className="text-muted mb-3 d-flex align-items-center gap-2 text-truncate"
-                      style={{ fontSize: "12px" }}
+                      className="text-muted mb-3"
+                      style={{ 
+                        fontSize: "11px",
+                        lineHeight: "1.4",
+                        height: "60px",
+                        overflow: "hidden",
+                        display: "-webkit-box",
+                        WebkitLineClamp: 4,
+                        WebkitBoxOrient: "vertical"
+                      }}
                       title={course.desc}
                     >
-                      <img src={fileIcon} alt="file" width="10" height="14" />{" "}
+                      <img src={fileIcon} alt="file" width="10" height="14" className="me-1" />
                       {course.desc}
                     </p>
                     <button 
-                      className="w-100 enroll-btn playfair-display-custom fw-medium py-2"
+                      className="w-100 enroll-btn playfair-display-custom fw-medium py-2 mt-auto"
                       onClick={() => handleEnrollClick(course)}
+                      style={{
+                        fontSize: "12px",
+                        borderRadius: "25px",
+                        backgroundColor: "#02AEF1",
+                        border: "none",
+                        color: "white",
+                        transition: "all 0.3s ease"
+                      }}
                     >
                       ENROLL NOW
                     </button>

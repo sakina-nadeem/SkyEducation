@@ -36,6 +36,7 @@ function NavigationBar() {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About Us</Nav.Link>
             <Nav.Link as={Link} to="/faqs">FAQ</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
 
             {/* Courses Dropdown */}
             <NavDropdown
@@ -63,7 +64,7 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item">
+                    <NavDropdown.Item href="https://sky-aesthetic.vercel.app/" target="_blank" className="category-item">
                       <div className="d-flex align-items-center">
                      
                         <div className="flex-grow-1">

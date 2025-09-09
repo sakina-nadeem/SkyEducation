@@ -18,6 +18,9 @@ import AboutUsPage from "./pages/About";
 import FaqPage from "./pages/Faqs";
 import CoursesPage from "./pages/Courses";
 import EnrollmentPage from "./pages/Enrollment";
+import ContactPage from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 
 const App = () => {
   return (
@@ -53,6 +56,15 @@ const App = () => {
 
         {/* Enrollment Page */}
         <Route path="/enroll" element={<EnrollmentPage />} />
+
+        {/* Contact Page */}
+        <Route path="/contact" element={<ContactPage />} />
+
+        {/* Privacy Policy Page */}
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+
+        {/* Terms & Conditions Page */}
+        <Route path="/terms" element={<TermsConditions />} />
        
       </Routes>
     </Router>

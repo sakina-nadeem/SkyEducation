@@ -113,6 +113,73 @@ const About = () => {
         </div>
       </section>
 
+      {/* CEO Section */}
+      <section className="py-5" style={{ backgroundColor: "#ffffff" }}>
+        <div className="container">
+          <div className="row align-items-center">
+            {/* CEO Image */}
+            <div className="col-lg-5 col-md-6 mb-4 mb-md-0">
+              <div className="text-center">
+                <img
+                  src="https://via.placeholder.com/400x600/02AEF1/FFFFFF?text=CEO+Photo+Placeholder"
+                  alt="Noreen Aslam - Founder and CEO"
+                  className="img-fluid rounded"
+                  style={{
+                    maxWidth: "400px",
+                    height: "auto",
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.1)"
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* CEO Content */}
+            <div className="col-lg-7 col-md-6">
+              <div className="ps-lg-4">
+                <h2 
+                  className="fw-bold mb-3" 
+                  style={{ 
+                    color: "#02AEF1",
+                    fontSize: "2.5rem"
+                  }}
+                >
+                  Meet Noreen Aslam
+                </h2>
+                <h4 
+                  className="text-muted mb-4"
+                  style={{ fontSize: "1.2rem" }}
+                >
+                  Founder and CEO
+                </h4>
+                
+                <p className="mb-3" style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
+                  I'm <span style={{ color: "#02AEF1", fontWeight: "600" }}>Noreen Aslam</span>, 
+                  the CEO and founder of <span style={{ color: "#02AEF1", fontWeight: "600" }}>Sky Education</span>, 
+                  a pioneering institute dedicated to elevating your journey in aesthetics.
+                </p>
+
+                <p className="mb-3" style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
+                  With a background in business management and a portfolio of successful ventures across 
+                  the UK and Scotland, I established Sky Education to redefine educational excellence 
+                  in the aesthetics industry.
+                </p>
+
+                <p className="mb-3" style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
+                  At Sky Education, we believe in reaching new heights, where the horizon is limitless 
+                  for your educational aspirations. As an approved Ofqual center, we uphold the highest 
+                  standards of quality and professionalism.
+                </p>
+
+                <p className="mb-0" style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
+                  Our team boasts over <span style={{ color: "#02AEF1", fontWeight: "600" }}>50 years of collective experience</span>, 
+                  poised to impart invaluable knowledge and expertise in the art and science of aesthetics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section
         className="py-5"
