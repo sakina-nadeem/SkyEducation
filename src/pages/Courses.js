@@ -22,7 +22,6 @@ const CoursesPage = () => {
   const categories = [
     { key: "ALL", name: "All Courses", count: courseData.ALL.length },
     { key: "SEG", name: "Automotive & MOT", count: courseData.SEG.length },
-    { key: "VTCT", name: "Beauty & Aesthetics", count: courseData.VTCT.length },
     { key: "PERSONS", name: "English & Math", count: courseData.PERSONS.length },
     { key: "PRO QUAL", name: "Security & Safety", count: courseData["PRO QUAL"].length },
     { key: "SQA", name: "Taxi & Private Hire", count: courseData.SQA.length },
@@ -103,13 +102,7 @@ const CoursesPage = () => {
                       className={`p-3 border-bottom cursor-pointer category-item ${
                         selectedCategory === category.key ? "active-category" : ""
                       }`}
-                      onClick={() => {
-                        if (category.key === "VTCT") {
-                          window.open("https://sky-aesthetic.vercel.app/", "_blank");
-                        } else {
-                          setSelectedCategory(category.key);
-                        }
-                      }}
+                      onClick={() => setSelectedCategory(category.key)}
                     >
                       <div className="d-flex justify-content-between align-items-center">
                         <span className="fw-medium">{category.name}</span>
