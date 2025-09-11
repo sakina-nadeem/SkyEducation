@@ -22,6 +22,7 @@ const CoursesPage = () => {
   const categories = [
     { key: "ALL", name: "All Courses", count: courseData.ALL.length },
     { key: "SEG", name: "Automotive & MOT", count: courseData.SEG.length },
+    { key: "VTCT", name: "Beauty & Aesthetics", count: 22, isExternal: true, link: "https://sky-aesthetic.vercel.app/" },
     { key: "PERSONS", name: "English & Math", count: courseData.PERSONS.length },
     { key: "PRO QUAL", name: "Security & Safety", count: courseData["PRO QUAL"].length },
     { key: "SQA", name: "Taxi & Private Hire", count: courseData.SQA.length },
@@ -102,7 +103,13 @@ const CoursesPage = () => {
                       className={`p-3 border-bottom cursor-pointer category-item ${
                         selectedCategory === category.key ? "active-category" : ""
                       }`}
-                      onClick={() => setSelectedCategory(category.key)}
+                      onClick={() => {
+                        if (category.isExternal) {
+                          window.open(category.link, "_blank");
+                        } else {
+                          setSelectedCategory(category.key);
+                        }
+                      }}
                     >
                       <div className="d-flex justify-content-between align-items-center">
                         <span className="fw-medium">{category.name}</span>
