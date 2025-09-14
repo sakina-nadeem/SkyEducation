@@ -87,11 +87,7 @@ function Hero() {
               className="text-uppercase d-flex align-items-center ls-1"
               style={{ fontSize: "11px" }}
             >
-              <img
-                src={logo}
-                alt="Logo"
-                style={{ height: "20px", width: "auto", marginRight: "8px" }}
-              />
+              
               Learning, Education, Training
             </small>
 
