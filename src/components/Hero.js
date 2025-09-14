@@ -57,7 +57,7 @@ function Hero() {
 
   const handleSearch = () => {
     if (selectedCategory === "VTCT") {
-      window.open("https://sky-aesthetic.vercel.app/", "_blank");
+      window.open("https://skyaestheticstraining.co.uk/ ", "_blank");
       return;
     }
     

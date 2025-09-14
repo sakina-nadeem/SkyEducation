@@ -22,7 +22,7 @@ const CoursesPage = () => {
   const categories = [
     { key: "ALL", name: "All Courses", count: courseData.ALL.length },
     { key: "SEG", name: "Automotive & MOT", count: courseData.SEG.length },
-    { key: "VTCT", name: "Beauty & Aesthetics", count: 22, isExternal: true, link: "https://sky-aesthetic.vercel.app/" },
+    { key: "VTCT", name: "Beauty & Aesthetics", count: 22, isExternal: true, link: "https://skyaestheticstraining.co.uk/" },
     { key: "PERSONS", name: "English & Math", count: courseData.PERSONS.length },
     { key: "PRO QUAL", name: "Security & Safety", count: courseData["PRO QUAL"].length },
     { key: "SQA", name: "Taxi & Private Hire", count: courseData.SQA.length },

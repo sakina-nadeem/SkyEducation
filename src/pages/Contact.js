@@ -121,7 +121,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h6 className="fw-bold mb-1">Location</h6>
-                      <p className="mb-0 text-muted">Manchester, United Kingdom</p>
+                      <p className="mb-0 text-muted">281 Barlow Moor Road Chorlton Manchester M21 7GH</p>
                     </div>
                   </div>
                 </Card.Body>

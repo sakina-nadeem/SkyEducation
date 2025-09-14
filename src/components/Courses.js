@@ -66,12 +66,8 @@ const CoursesSection = () => {
             <button
               key={cat}
               onClick={() => {
-                if (cat === "VTCT") {
-                  window.open("https://sky-aesthetic.vercel.app/", "_blank");
-                } else {
-                  setActiveCategory(cat);
-                  setStartIndex(0); // reset to first page when category changes
-                }
+                setActiveCategory(cat);
+                setStartIndex(0); // reset to first page when category changes
               }}
               className={`btn px-3 py-2 fw-lighter ${
                 activeCategory === cat ? "active-btn " : "inactive-btn border-dark "

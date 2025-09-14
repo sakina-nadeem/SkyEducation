@@ -123,7 +123,7 @@ const PrivacyPolicy = () => {
                       <div className="contact-info">
                         <p className="mb-1"><strong>Email:</strong> Info@skyeducationltd.com</p>
                         <p className="mb-1"><strong>Phone:</strong> 07507 500507</p>
-                        <p className="mb-1"><strong>Address:</strong> Manchester, United Kingdom</p>
+                        <p className="mb-1"><strong>Address:</strong> 281 Barlow Moor Road Chorlton Manchester M21 7GH</p>
                       </div>
                     </section>
 

@@ -23,11 +23,18 @@ const getCourseImage = (category, number) => {
       } else {
         return require(`../Assests/${category}${number}.jpg`);
       }
+    } else if (category === 'vtct') {
+      if (number === 10 || number === 13 || number === 20 || number === 22) {
+        return require(`../Assests/${category}${number}.jpg`);
+      } else {
+        return require(`../Assests/${category}${number}.avif`);
+      }
     }
   } catch (error) {
     console.warn(`Image not found: ${category}${number}`, error);
     return require('../Assests/logo00.png'); // Fallback to logo
   }
+  
   return require('../Assests/logo00.png'); // Default fallback
 };
 
@@ -166,6 +173,44 @@ const courseData = {
       title: "Level 1 Health & Safety in Construction",
       desc: "The Level 1 Health & Safety in Construction course provides a comprehensive introduction to essential health and safety practices, regulations, and responsibilities within the construction sector. This foundational program covers key topics including hazard identification, risk assessment procedures, personal protective equipment usage, and safe working practices on construction sites. Students will learn about legal requirements, accident prevention strategies, emergency procedures, and the importance of maintaining a safety-first culture in construction environments. The course includes practical elements such as site safety inspections, safety equipment demonstrations, and case study analyses of construction accidents. Emphasis is placed on developing safety awareness, understanding regulatory compliance requirements, and building the knowledge foundation necessary for safe participation in construction activities.",
       img: getCourseImage('proqual', 3),
+    },
+
+    // VTCT - Beauty Therapy & Aesthetics Courses
+    {
+      id: 15,
+      title: "Level 2 VTCT Diploma in Beauty Therapy",
+      desc: "The Level 2 VTCT Diploma in Beauty Therapy provides comprehensive training in fundamental beauty therapy techniques, preparing students for entry-level positions in the beauty industry. This course covers essential skills including facial treatments, waxing, eyebrow and eyelash treatments, manicures, pedicures, and basic makeup application. Students will learn anatomy and physiology, skin analysis, health and safety protocols, and professional consultation techniques. The program emphasizes practical skills development through hands-on training with real clients in our professional salon environment. Graduates will be qualified to work in beauty salons, spas, hotels, or start their own beauty therapy business.",
+      img: getCourseImage('vtct', 1),
+    },
+    {
+      id: 16,
+      title: "Level 3 VTCT Diploma in Beauty Therapy",
+      desc: "The Level 3 VTCT Diploma in Beauty Therapy is an advanced qualification that builds upon Level 2 skills, introducing specialized treatments and advanced beauty therapy techniques. This comprehensive program covers electrical facial treatments, body massage, lymphatic drainage, advanced waxing techniques, and professional makeup artistry. Students will master the use of professional equipment, learn advanced consultation and treatment planning, and develop expertise in client care and aftercare advice. The course includes business skills, marketing strategies, and salon management principles. This qualification opens pathways to senior therapist roles, spa management positions, or establishing a successful beauty therapy practice.",
+      img: getCourseImage('vtct', 2),
+    },
+    {
+      id: 17,
+      title: "Level 2 VTCT Certificate in Nail Technology",
+      desc: "The Level 2 VTCT Certificate in Nail Technology provides specialized training in professional nail services, covering both natural nail care and artificial nail enhancement techniques. Students will learn manicure and pedicure procedures, nail art, gel polish application, nail extensions using tips and forms, and creative nail designs. The course covers nail anatomy, common nail disorders, health and safety protocols, and client consultation procedures. Practical training includes working with various nail systems, tools, and equipment used in professional nail salons. Graduates will be qualified to work as nail technicians in salons, spas, or mobile nail services.",
+      img: getCourseImage('vtct', 3),
+    },
+    {
+      id: 18,
+      title: "Level 3 VTCT Diploma in Nail Technology",
+      desc: "The Level 3 VTCT Diploma in Nail Technology is an advanced qualification that covers sophisticated nail enhancement techniques and business management skills. This program includes advanced nail art techniques, 3D nail designs, airbrush nail art, advanced gel and acrylic systems, and nail repair methods. Students will learn to assess nail conditions, provide specialized treatments for nail disorders, and master complex nail enhancement procedures. The course also covers salon management, staff training, marketing strategies, and business development. This qualification prepares graduates for senior nail technician roles, salon ownership, or specialized nail art positions in high-end establishments.",
+      img: getCourseImage('vtct', 4),
+    },
+    {
+      id: 19,
+      title: "Level 2 VTCT Certificate in Massage",
+      desc: "The Level 2 VTCT Certificate in Massage provides comprehensive training in professional massage techniques, focusing on relaxation and therapeutic massage methods. Students will learn various massage strokes, pressure techniques, and body mechanics required for effective massage delivery. The course covers anatomy and physiology, contraindications, consultation procedures, and aftercare advice. Training includes Swedish massage, aromatherapy massage, and hot stone massage techniques. Students will develop skills in creating relaxing environments, professional communication, and treatment adaptation for different client needs. This qualification opens opportunities in spas, wellness centers, hotels, and mobile massage services.",
+      img: getCourseImage('vtct', 5),
+    },
+    {
+      id: 20,
+      title: "Level 3 VTCT Diploma in Complementary Therapies",
+      desc: "The Level 3 VTCT Diploma in Complementary Therapies is a comprehensive program that covers multiple holistic therapy disciplines. Students will study reflexology, aromatherapy, Indian head massage, and body massage techniques. The course provides in-depth knowledge of anatomy, physiology, and pathology, enabling therapists to adapt treatments for various health conditions. Training includes consultation skills, treatment planning, contraindications, and professional ethics. Students will learn to integrate different therapies for optimal client outcomes and develop business skills for independent practice. This qualification prepares graduates for roles in holistic health centers, spas, or private complementary therapy practice.",
+      img: getCourseImage('vtct', 6),
     },
 
     // SQA - Taxi & Private Hire Courses
@@ -334,6 +379,45 @@ const courseData = {
       title: "Level 3 Award in Assessing Competence at Work",
       desc: "This Level 3 Award in Assessing Competence at Work focuses specifically on developing the skills required to assess occupational competence in real workplace environments. The course provides in-depth training on competency-based assessment principles, enabling participants to evaluate whether workers can perform their job roles to the required standards. Students will learn to design assessment plans, conduct workplace observations, gather evidence of competence, and provide constructive feedback to support professional development. The program covers legal and ethical considerations, health and safety requirements, and the importance of maintaining professional relationships with candidates throughout the assessment process.",
       img: getCourseImage('icq', 4),
+    },
+  ],
+
+  VTCT: [
+    {
+      id: 1,
+      title: "Level 2 VTCT Diploma in Beauty Therapy",
+      desc: "The Level 2 VTCT Diploma in Beauty Therapy provides comprehensive training in fundamental beauty therapy techniques, preparing students for entry-level positions in the beauty industry. This course covers essential skills including facial treatments, waxing, eyebrow and eyelash treatments, manicures, pedicures, and basic makeup application. Students will learn anatomy and physiology, skin analysis, health and safety protocols, and professional consultation techniques. The program emphasizes practical skills development through hands-on training with real clients in our professional salon environment. Graduates will be qualified to work in beauty salons, spas, hotels, or start their own beauty therapy business.",
+      img: getCourseImage('vtct', 1),
+    },
+    {
+      id: 2,
+      title: "Level 3 VTCT Diploma in Beauty Therapy",
+      desc: "The Level 3 VTCT Diploma in Beauty Therapy is an advanced qualification that builds upon Level 2 skills, introducing specialized treatments and advanced beauty therapy techniques. This comprehensive program covers electrical facial treatments, body massage, lymphatic drainage, advanced waxing techniques, and professional makeup artistry. Students will master the use of professional equipment, learn advanced consultation and treatment planning, and develop expertise in client care and aftercare advice. The course includes business skills, marketing strategies, and salon management principles. This qualification opens pathways to senior therapist roles, spa management positions, or establishing a successful beauty therapy practice.",
+      img: getCourseImage('vtct', 2),
+    },
+    {
+      id: 3,
+      title: "Level 2 VTCT Certificate in Nail Technology",
+      desc: "The Level 2 VTCT Certificate in Nail Technology provides specialized training in professional nail services, covering both natural nail care and artificial nail enhancement techniques. Students will learn manicure and pedicure procedures, nail art, gel polish application, nail extensions using tips and forms, and creative nail designs. The course covers nail anatomy, common nail disorders, health and safety protocols, and client consultation procedures. Practical training includes working with various nail systems, tools, and equipment used in professional nail salons. Graduates will be qualified to work as nail technicians in salons, spas, or mobile nail services.",
+      img: getCourseImage('vtct', 3),
+    },
+    {
+      id: 4,
+      title: "Level 3 VTCT Diploma in Nail Technology",
+      desc: "The Level 3 VTCT Diploma in Nail Technology is an advanced qualification that covers sophisticated nail enhancement techniques and business management skills. This program includes advanced nail art techniques, 3D nail designs, airbrush nail art, advanced gel and acrylic systems, and nail repair methods. Students will learn to assess nail conditions, provide specialized treatments for nail disorders, and master complex nail enhancement procedures. The course also covers salon management, staff training, marketing strategies, and business development. This qualification prepares graduates for senior nail technician roles, salon ownership, or specialized nail art positions in high-end establishments.",
+      img: getCourseImage('vtct', 4),
+    },
+    {
+      id: 5,
+      title: "Level 2 VTCT Certificate in Massage",
+      desc: "The Level 2 VTCT Certificate in Massage provides comprehensive training in professional massage techniques, focusing on relaxation and therapeutic massage methods. Students will learn various massage strokes, pressure techniques, and body mechanics required for effective massage delivery. The course covers anatomy and physiology, contraindications, consultation procedures, and aftercare advice. Training includes Swedish massage, aromatherapy massage, and hot stone massage techniques. Students will develop skills in creating relaxing environments, professional communication, and treatment adaptation for different client needs. This qualification opens opportunities in spas, wellness centers, hotels, and mobile massage services.",
+      img: getCourseImage('vtct', 5),
+    },
+    {
+      id: 6,
+      title: "Level 3 VTCT Diploma in Complementary Therapies",
+      desc: "The Level 3 VTCT Diploma in Complementary Therapies is a comprehensive program that covers multiple holistic therapy disciplines. Students will study reflexology, aromatherapy, Indian head massage, and body massage techniques. The course provides in-depth knowledge of anatomy, physiology, and pathology, enabling therapists to adapt treatments for various health conditions. Training includes consultation skills, treatment planning, contraindications, and professional ethics. Students will learn to integrate different therapies for optimal client outcomes and develop business skills for independent practice. This qualification prepares graduates for roles in holistic health centers, spas, or private complementary therapy practice.",
+      img: getCourseImage('vtct', 6),
     },
   ],
 };

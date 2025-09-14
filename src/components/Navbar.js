@@ -64,7 +64,7 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="https://sky-aesthetic.vercel.app/" target="_blank" className="category-item">
+                    <NavDropdown.Item href="https://skyaestheticstraining.co.uk/" target="_blank" className="category-item">
                       <div className="d-flex align-items-center">
                      
                         <div className="flex-grow-1">
