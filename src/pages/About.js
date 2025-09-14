@@ -7,7 +7,7 @@ import "./aboutus.css";
 import "../components/about.css";
 import Tesimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
-
+import CE from "../Assests/CE.jpeg";
 const About = () => {
   useEffect(() => {
     // Initialize AOS
@@ -31,8 +31,16 @@ const About = () => {
         <Particles
           id="tsparticles"
           init={particlesInit}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 1
+          }}
           options={{
-            fullScreen: { enable: true },
+            fullScreen: { enable: false },
             particles: {
               number: { value: 80, density: { enable: true, area: 800 } },
               color: { value: "#ffffff" },
@@ -40,6 +48,7 @@ const About = () => {
               opacity: { value: 0.5 },
               size: { value: 3, random: true },
               links: {
+                
                 enable: true,
                 distance: 150,
                 color: "#ffffff",
@@ -121,7 +130,8 @@ const About = () => {
             <div className="col-lg-5 col-md-6 mb-4 mb-md-0">
               <div className="text-center">
                 <img
-                  src="https://via.placeholder.com/400x600/02AEF1/FFFFFF?text=CEO+Photo+Placeholder"
+                  src={CE}
+                  
                   alt="Noreen Aslam - Founder and CEO"
                   className="img-fluid rounded"
                   style={{
@@ -183,20 +193,19 @@ const About = () => {
       {/* About Section */}
       <section
         className="py-5"
-        style={{ backgroundColor: "#02AEF126", marginTop: "160px" }}
+        style={{ backgroundColor: "#02AEF126", marginTop: "80px" }}
         id="about"
       >
         <div className="container">
           {/* Section Heading */}
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h2
-              className="fw-bold playfair-display-custom mb-3"
+              className="fw-bold playfair-display-custom mb-2"
               style={{ color: "rgba(2, 174, 241, 1)" }}
             >
-              Exceptional training across health,
-              <br /> beauty, and public services.
+              Exceptional training across health, beauty, and public services.
             </h2>
-            <p className="text-muted mb-0">
+            <p className="text-muted mb-0" style={{ fontSize: "1.1rem" }}>
               Empowering students with practical skills for successful careers.
             </p>
           </div>
@@ -204,21 +213,17 @@ const About = () => {
           {/* Content */}
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-10 text-center">
-              <p className="mb-4">
+              <p className="mb-4" style={{ fontSize: "1rem", lineHeight: "1.6" }}>
                 At Sky Education, we are dedicated to fostering learning and
                 development across a broad spectrum of disciplines, from health
                 and beauty to public services and education. Established in the
                 UK, our institution is committed to providing high-quality,
                 accessible education that equips our students with the skills
                 and knowledge necessary to excel in their chosen fields.
-              </p>
-              <p className="mb-4">
                 Our comprehensive curriculum is designed by industry experts to
                 ensure relevance in today's competitive job market. We offer
                 hands-on training, modern facilities, and personalized support
                 to help each student achieve their full potential.
-              </p>
-              <p className="mb-4">
                 Whether you're pursuing a career in healthcare, beauty therapy,
                 or public service, our programs provide the foundation you need
                 for long-term professional success. We believe in education that
@@ -226,7 +231,7 @@ const About = () => {
               </p>
               <div className="d-flex justify-content-center mt-4">
                 <button
-                  className="btn px-5 py-3 LearnButton"
+                  className="btn px-5 py-3"
                   style={{
                     backgroundColor: "#02AEF1",
                     borderColor: "#02AEF1",
@@ -234,6 +239,7 @@ const About = () => {
                     borderRadius: "6px",
                     fontWeight: "600",
                     fontSize: "1.1rem",
+                    border: "none"
                   }}
                 >
                   Explore Our Programs

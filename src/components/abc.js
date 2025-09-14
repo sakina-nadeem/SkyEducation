@@ -164,6 +164,7 @@ const About = () => {
 
           {/* Content - Centered without images */}
           <div className="row justify-content-center">
+            
             <div className="col-lg-8 col-md-10 text-center">
               <p className="mb-4">
                 At Sky Education, we are dedicated to fostering learning and
