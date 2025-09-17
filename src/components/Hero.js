@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import logo from "../Assests/logo00.png";
-import searchDark from "../Assests/searchicondark.png";
 import searchWhite from "../Assests/searchiconwhite.png";
 import courseData from "./CourseData";
 import "./home.css";
@@ -12,14 +11,12 @@ function Hero() {
   const [selectedCourse, setSelectedCourse] = useState("");
   const [categorySearchTerm, setCategorySearchTerm] = useState("");
   const [courseSearchTerm, setCourseSearchTerm] = useState("");
-  const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
-  const [showCourseDropdown, setShowCourseDropdown] = useState(false);
   const navigate = useNavigate();
 
   const categories = [
     { key: "ALL", name: "All Courses" },
     { key: "SEG", name: "Automotive & MOT" },
-    { key: "VTCT", name: "Beauty & Aesthetics" },
+    { key: "VTCT", name: "ESOL Certificates" },
     { key: "PERSONS", name: "English & Math" },
     { key: "PRO QUAL", name: "Security & Safety" },
     { key: "SQA", name: "Taxi & Private Hire" },
@@ -33,47 +30,40 @@ function Hero() {
     return courseData[selectedCategory] || [];
   };
 
-  const filteredCategories = categories.filter(cat =>
-    cat.name.toLowerCase().includes(categorySearchTerm.toLowerCase())
-  );
-
-  const filteredCourses = getCoursesForCategory().filter(course =>
-    course.title.toLowerCase().includes(courseSearchTerm.toLowerCase())
-  );
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category.key);
     setCategorySearchTerm(category.name);
     setSelectedCourse("");
     setCourseSearchTerm("");
-    setShowCategoryDropdown(false);
   };
 
   const handleCourseSelect = (course) => {
     setSelectedCourse(course.id);
     setCourseSearchTerm(course.title);
-    setShowCourseDropdown(false);
   };
 
+
   const handleSearch = () => {
-    if (selectedCategory === "VTCT") {
-      window.open("https://skyaestheticstraining.co.uk/ ", "_blank");
-      return;
-    }
+    // Always navigate to enroll page when search button is clicked
+    let courseData = null;
     
-    if (selectedCourse) {
-      // Navigate to specific course enrollment page
+    if (selectedCourse && selectedCategory) {
+      // If both category and course are selected, pass the specific course data
       const course = getCoursesForCategory().find(c => c.id === selectedCourse);
       if (course) {
-        navigate('/enroll', { state: { course } });
+        courseData = {
+          course,
+          category: selectedCategory,
+          categoryName: categories.find(cat => cat.key === selectedCategory)?.name
+        };
       }
-    } else if (selectedCategory) {
-      // Navigate to courses page with selected category
-      navigate('/courses', { state: { selectedCategory } });
-    } else {
-      // Navigate to general courses page
-      navigate('/courses');
     }
+    
+    // Navigate to enroll page with or without course data
+    navigate('/enroll', { 
+      state: courseData ? courseData : { selectedCategory, categoryName: categories.find(cat => cat.key === selectedCategory)?.name }
+    });
   };
   return (
     <section
@@ -109,98 +99,65 @@ function Hero() {
             {/* Course Category */}
             <div
               className="d-flex flex-column px-2 mb-2 mb-sm-0"
-              style={{ minWidth: "230px", width: "280px" }}
+              style={{ minWidth: "300px", width: "350px" }}
             >
               <label className="blue mb-1 text-start fw-semibold">
                 Course Category
               </label>
               <div className="search-input-wrapper position-relative">
-                <Form.Control
-                  type="text"
-                  placeholder="Search your Course..."
-                  value={categorySearchTerm}
-                  onChange={(e) => setCategorySearchTerm(e.target.value)}
-                  onFocus={() => setShowCategoryDropdown(true)}
-                  className="search-input border-0 border-bottom border-black rounded-0 shadow-none px-0"
-                  style={{ width: "100%" }}
-                />
-                <img
-                  src={searchDark}
-                  alt="Search Icon"
-                  className="position-absolute"
-                  style={{
-                    right: "10px",
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    width: "18px",
-                    height: "auto",
+                <Form.Select
+                  value={selectedCategory}
+                  onChange={(e) => {
+                    const categoryKey = e.target.value;
+                    const category = categories.find(cat => cat.key === categoryKey);
+                    if (category) {
+                      handleCategorySelect(category);
+                    }
                   }}
-                />
-                {showCategoryDropdown && filteredCategories.length > 0 && (
-                  <div className="position-absolute w-100 bg-white border rounded shadow-sm" style={{ top: "100%", zIndex: 1000, maxHeight: "200px", overflowY: "auto" }}>
-                    {filteredCategories.map((category) => (
-                      <div
-                        key={category.key}
-                        className="p-2 border-bottom cursor-pointer"
-                        style={{ cursor: "pointer" }}
-                        onClick={() => handleCategorySelect(category)}
-                        onMouseEnter={(e) => e.target.style.backgroundColor = "#f8f9fa"}
-                        onMouseLeave={(e) => e.target.style.backgroundColor = "white"}
-                      >
-                        <small className="text-dark">{category.name}</small>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                  className="search-input border-0 border-bottom border-black rounded-0 shadow-none px-0"
+                  style={{ width: "100%", backgroundColor: "transparent" }}
+                >
+                  <option value="">Select Course Category...</option>
+                  {categories.map((category) => (
+                    <option key={category.key} value={category.key}>
+                      {category.name}
+                    </option>
+                  ))}
+                </Form.Select>
               </div>
             </div>
 
             {/* Course Name */}
             <div
               className="d-flex flex-column px-2 ms-sm-2 mb-2 mb-sm-0"
-              style={{ minWidth: "230px", width: "280px" }}
+              style={{ minWidth: "300px", width: "350px" }}
             >
               <label className="blue mb-1 text-start fw-semibold">
                 Course Name
               </label>
               <div className="search-input-wrapper position-relative">
-                <Form.Control
-                  type="text"
-                  placeholder="Book your Course..."
-                  value={courseSearchTerm}
-                  onChange={(e) => setCourseSearchTerm(e.target.value)}
-                  onFocus={() => setShowCourseDropdown(true)}
-                  className="search-input border-0 border-bottom border-black rounded-0 shadow-none px-0"
-                  style={{ width: "100%" }}
-                />
-                <img
-                  src={searchDark}
-                  alt="Search Icon"
-                  className="position-absolute"
-                  style={{
-                    right: "10px",
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    width: "18px",
-                    height: "auto",
+                <Form.Select
+                  value={selectedCourse}
+                  onChange={(e) => {
+                    const courseId = parseInt(e.target.value);
+                    const course = getCoursesForCategory().find(c => c.id === courseId);
+                    if (course) {
+                      handleCourseSelect(course);
+                    }
                   }}
-                />
-                {showCourseDropdown && filteredCourses.length > 0 && (
-                  <div className="position-absolute w-100 bg-white border rounded shadow-sm" style={{ top: "100%", zIndex: 1000, maxHeight: "200px", overflowY: "auto" }}>
-                    {filteredCourses.slice(0, 10).map((course) => (
-                      <div
-                        key={course.id}
-                        className="p-2 border-bottom cursor-pointer"
-                        style={{ cursor: "pointer" }}
-                        onClick={() => handleCourseSelect(course)}
-                        onMouseEnter={(e) => e.target.style.backgroundColor = "#f8f9fa"}
-                        onMouseLeave={(e) => e.target.style.backgroundColor = "white"}
-                      >
-                        <small className="text-dark fw-medium">{course.title}</small>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                  disabled={!selectedCategory}
+                  className="search-input border-0 border-bottom border-black rounded-0 shadow-none px-0"
+                  style={{ width: "100%", backgroundColor: "transparent" }}
+                >
+                  <option value="">
+                    {selectedCategory ? "Select a Course..." : "First select a category"}
+                  </option>
+                  {selectedCategory && getCoursesForCategory().map((course) => (
+                    <option key={course.id} value={course.id}>
+                      {course.title}
+                    </option>
+                  ))}
+                </Form.Select>
               </div>
             </div>
 

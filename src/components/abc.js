@@ -1,24 +1,30 @@
 import React, { useEffect, useState } from "react";
+import { Container, Row, Col, Button, Card, Spinner } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import "./aboutus.css"; // We will move custom CSS here
+import "./aboutus.css";
 import "../components/about.css";
-import Tesimonials from "../components/Testimonials";
+import Testimonials from "../components/Testimonials";
+import Footer from "../components/Footer";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Initialize AOS
-    AOS.init({ duration: 1000, once: true, offset: 100 });
+    // Initialize AOS animations
+    AOS.init({ 
+      duration: 1000, 
+      once: true, 
+      offset: 100 
+    });
 
-    // Simulate loading
-    setTimeout(() => setLoading(false), 2000);
+    // Simulate loading time
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
   }, []);
 
-  // Particles init
   const particlesInit = async (main) => {
     await loadFull(main);
   };
@@ -30,12 +36,68 @@ const About = () => {
     }
   };
 
+  // Particles configuration
+  const particlesConfig = {
+    fullScreen: { enable: true },
+    particles: {
+      number: { 
+        value: 80, 
+        density: { enable: true, area: 800 } 
+      },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3, random: true },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1,
+      },
+      move: { 
+        enable: true, 
+        speed: 6, 
+        outModes: { default: "out" } 
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: { enable: true, mode: "repulse" },
+        onClick: { enable: true, mode: "push" },
+      },
+    },
+    detectRetina: true,
+  };
+
+  // Mission, Vision, Values data
+  const aboutCards = [
+    {
+      icon: "fas fa-bullseye",
+      title: "Our Mission",
+      description: "To foster lifelong learning by providing accessible and innovative education opportunities that transform lives.",
+      animation: "fade-right"
+    },
+    {
+      icon: "fas fa-eye",
+      title: "Our Vision", 
+      description: "To be a leader in education, empowering learners to achieve their dreams and shape a better future.",
+      animation: "fade-up"
+    },
+    {
+      icon: "fas fa-star",
+      title: "Why Choose Us?",
+      description: "Expert trainers, flexible courses, and a supportive learning environment to ensure your success.",
+      animation: "fade-left"
+    }
+  ];
+
   if (loading) {
     return (
-      <div className="d-flex vh-100 align-items-center justify-content-center">
+      <div className="d-flex vh-100 align-items-center justify-content-center bg-light">
         <div className="text-center">
-          <div className="spinner-border text-primary mb-3" role="status"></div>
-          <h3>Loading Sky Education...</h3>
+          <Spinner animation="border" variant="primary" className="mb-3" />
+          <h3 className="text-primary">Loading Sky Education...</h3>
         </div>
       </div>
     );
@@ -43,7 +105,7 @@ const About = () => {
 
   return (
     <div>
-      {/* Hero Section */}
+      {/* Hero Section with Particles */}
       <section
         className="position-relative text-white min-vh-100 d-flex align-items-center justify-content-center"
         style={{
@@ -53,160 +115,170 @@ const About = () => {
         <Particles
           id="tsparticles"
           init={particlesInit}
-          options={{
-            fullScreen: { enable: true },
-            particles: {
-              number: { value: 80, density: { enable: true, area: 800 } },
-              color: { value: "#ffffff" },
-              shape: { type: "circle" },
-              opacity: { value: 0.5 },
-              size: { value: 3, random: true },
-              links: {
-                enable: true,
-                distance: 150,
-                color: "#ffffff",
-                opacity: 0.4,
-                width: 1,
-              },
-              move: { enable: true, speed: 6, outModes: { default: "out" } },
-            },
-            interactivity: {
-              events: {
-                onHover: { enable: true, mode: "repulse" },
-                onClick: { enable: true, mode: "push" },
-              },
-            },
-            detectRetina: true,
-          }}
+          options={particlesConfig}
         />
 
-        <div className="text-center position-relative" style={{ zIndex: 10 }}>
-          <h1 className="display-1 fw-bold mb-3">About Us</h1>
-          <p className="lead mb-5">
-            At <strong>Sky Education</strong>, we empower individuals through
-            high-quality training in health, beauty, public services, and
-            education.
-          </p>
-
-          {/* Cards */}
-          <div className="d-flex flex-wrap justify-content-center gap-4 about-cards-wrapper">
-            <div
-              className="card about-card shadow-lg text-center p-4"
-              data-aos="fade-right"
-            >
-              <div className="icon-circle bg-primary text-white d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3">
-                <i className="fas fa-bullseye fa-2x"></i>
-              </div>
-              <h3 className="h5 fw-bold mb-2">Our Mission</h3>
-              <p className="text-muted">
-                To foster lifelong learning by providing accessible and
-                innovative education opportunities that transform lives.
+        <Container className="position-relative" style={{ zIndex: 10 }}>
+          <Row className="justify-content-center text-center">
+            <Col lg={10}>
+              <h1 className="display-1 fw-bold mb-4" data-aos="fade-down">
+                About Us
+              </h1>
+              <p className="lead mb-5" data-aos="fade-up" data-aos-delay="200">
+                At <strong>Sky Education</strong>, we empower individuals through
+                high-quality training in ESOL certificates, automotive, education,
+                and public services.
               </p>
-            </div>
 
-            <div
-              className="card about-card shadow-lg text-center p-4"
-              data-aos="fade-up"
-            >
-              <div className="icon-circle bg-primary text-white d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3">
-                <i className="fas fa-eye fa-2x"></i>
-              </div>
-              <h3 className="h5 fw-bold mb-2">Our Vision</h3>
-              <p className="text-muted">
-                To be a leader in education, empowering learners to achieve
-                their dreams and shape a better future.
-              </p>
-            </div>
+              {/* Mission, Vision, Values Cards */}
+              <Row className="g-4 mb-5">
+                {aboutCards.map((card, index) => (
+                  <Col md={4} key={index}>
+                    <Card 
+                      className="h-100 shadow-lg border-0 about-card"
+                      data-aos={card.animation}
+                      data-aos-delay={index * 100}
+                    >
+                      <Card.Body className="text-center p-4">
+                        <div 
+                          className="icon-circle bg-primary text-white d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3"
+                          style={{ width: "80px", height: "80px" }}
+                        >
+                          <i className={`${card.icon} fa-2x`}></i>
+                        </div>
+                        <Card.Title className="h5 fw-bold mb-3 text-dark">
+                          {card.title}
+                        </Card.Title>
+                        <Card.Text className="text-muted">
+                          {card.description}
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
 
-            <div
-              className="card about-card shadow-lg text-center p-4"
-              data-aos="fade-left"
-            >
-              <div className="icon-circle bg-primary text-white d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3">
-                <i className="fas fa-star fa-2x"></i>
-              </div>
-              <h3 className="h5 fw-bold mb-2">Why Choose Us?</h3>
-              <p className="text-muted">
-                Expert trainers, flexible courses, and a supportive learning
-                environment to ensure your success.
-              </p>
-            </div>
-          </div>
-
-          <button
-            className="btn btn-primary mt-5"
-            onClick={() => scrollToSection("testimonials")}
-          >
-            Explore Programs
-          </button>
-        </div>
+              <Button
+                variant="light"
+                size="lg"
+                className="px-5 py-3 fw-semibold"
+                onClick={() => scrollToSection("about-details")}
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                Learn More About Us
+              </Button>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
+      {/* Detailed About Section */}
       <section
         className="py-5"
-        style={{ backgroundColor: "#02AEF126", marginTop: "160px" }}
-        id="about"
+        style={{ backgroundColor: "#02AEF126" }}
+        id="about-details"
       >
-        <div className="container">
-          {/* Section Heading */}
-          <div className="text-center mb-5">
-            <h2
-              className="fw-bold playfair-display-custom mb-3"
-              style={{ color: "rgba(2, 174, 241, 1)" }}
-            >
-              Exceptional training across health,
-              <br /> beauty, and public services.
-            </h2>
-            <p className="text-muted mb-0">
-              Empowering students with practical skills for successful careers.
-            </p>
-          </div>
+        <Container>
+          <Row className="justify-content-center text-center mb-5">
+            <Col lg={10}>
+              <h2
+                className="fw-bold playfair-display-custom mb-3"
+                style={{ color: "rgba(2, 174, 241, 1)" }}
+                data-aos="fade-down"
+              >
+                Exceptional Training Across
+                <br />
+                Multiple Disciplines
+              </h2>
+              <p className="text-muted lead mb-0" data-aos="fade-up">
+                Empowering students with practical skills for successful careers.
+              </p>
+            </Col>
+          </Row>
 
-          {/* Content - Centered without images */}
-          <div className="row justify-content-center">
-            
-            <div className="col-lg-8 col-md-10 text-center">
-              <p className="mb-4">
-                At Sky Education, we are dedicated to fostering learning and
-                development across a broad spectrum of disciplines, from health
-                and beauty to public services and education. Established in the
-                UK, our institution is committed to providing high-quality,
-                accessible education that equips our students with the skills
-                and knowledge necessary to excel in their chosen fields.
-              </p>
-              <p className="mb-4">
-                Our comprehensive curriculum is designed by industry experts to
-                ensure relevance in today's competitive job market. We offer
-                hands-on training, modern facilities, and personalized support
-                to help each student achieve their full potential.
-              </p>
-              <p className="mb-4">
-                Whether you're pursuing a career in healthcare, beauty therapy,
-                or public service, our programs provide the foundation you need
-                for long-term professional success. We believe in education that
-                transforms lives and communities.
-              </p>
-              <div className="d-flex justify-content-center mt-4">
-                <button
-                  className="btn px-5 py-3 LearnButton"
-                  style={{
-                    backgroundColor: "#02AEF1",
-                    borderColor: "#02AEF1",
-                    color: "#fff",
-                    borderRadius: "6px",
-                    fontWeight: "600",
-                    fontSize: "1.1rem",
-                  }}
-                >
-                  Explore Our Programs
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+          <Row className="justify-content-center">
+            <Col lg={10} xl={8}>
+              <Row className="g-4">
+                <Col md={12} className="text-center mb-4">
+                  <div data-aos="fade-up">
+                    <p className="fs-5 text-dark mb-4 lh-base">
+                      At Sky Education, we are dedicated to fostering learning and
+                      development across a broad spectrum of disciplines, from ESOL
+                      certificates to automotive, education, and public services.
+                      Established in the UK, our institution is committed to providing
+                      high-quality, accessible education that equips our students with
+                      the skills and knowledge necessary to excel in their chosen fields.
+                    </p>
+                  </div>
+                </Col>
+
+                <Col md={6}>
+                  <Card 
+                    className="h-100 border-0 shadow-sm"
+                    data-aos="fade-right"
+                  >
+                    <Card.Body className="p-4">
+                      <h4 className="fw-semibold mb-3" style={{ color: "#02AEF1" }}>
+                        Industry-Expert Curriculum
+                      </h4>
+                      <p className="text-muted mb-0">
+                        Our comprehensive curriculum is designed by industry experts to
+                        ensure relevance in today's competitive job market. We offer
+                        hands-on training, modern facilities, and personalized support
+                        to help each student achieve their full potential.
+                      </p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+
+                <Col md={6}>
+                  <Card 
+                    className="h-100 border-0 shadow-sm"
+                    data-aos="fade-left"
+                  >
+                    <Card.Body className="p-4">
+                      <h4 className="fw-semibold mb-3" style={{ color: "#02AEF1" }}>
+                        Transformative Education
+                      </h4>
+                      <p className="text-muted mb-0">
+                        Whether you're pursuing ESOL certification, automotive skills,
+                        or public service careers, our programs provide the foundation
+                        you need for long-term professional success. We believe in
+                        education that transforms lives and communities.
+                      </p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+
+              <Row className="justify-content-center mt-5">
+                <Col md={6} className="text-center">
+                  <Button
+                    size="lg"
+                    className="px-5 py-3 fw-semibold"
+                    style={{
+                      backgroundColor: "#02AEF1",
+                      borderColor: "#02AEF1",
+                      borderRadius: "8px",
+                      fontSize: "1.1rem",
+                      boxShadow: "0 4px 15px rgba(2, 174, 241, 0.3)",
+                    }}
+                    data-aos="fade-up"
+                  >
+                    Explore Our Programs
+                  </Button>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
-      <Tesimonials />
+      {/* Testimonials Section */}
+      <Testimonials />
+      
+      {/* Footer */}
       <Footer />
     </div>
   );
