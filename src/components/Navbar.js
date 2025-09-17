@@ -6,6 +6,13 @@ import "./home.css";
 
 function NavigationBar() {
   const [showCourses, setShowCourses] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
+  // Function to close mobile menu when navigation item is clicked
+  const handleNavClick = () => {
+    setExpanded(false);
+    setShowCourses(false);
+  };
 
   return (
     <Navbar
@@ -13,10 +20,12 @@ function NavigationBar() {
       bg="white"
       fixed="top"
       className="shadow-sm py-2 px-lg-5"
+      expanded={expanded}
+      onToggle={(expanded) => setExpanded(expanded)}
     >
       <Container fluid className="px-4">
         {/* Logo goes to Home */}
-        <Navbar.Brand as={Link} to="/" className="logo">
+        <Navbar.Brand as={Link} to="/" className="logo" onClick={handleNavClick}>
           <img
             src={logo}
             alt="Logo"
@@ -33,10 +42,10 @@ function NavigationBar() {
         {/* Menu Items */}
         <Navbar.Collapse id="navbar-nav" className="justify-content-end">
           <Nav className="align-items-lg-center fw-semibold custom-nav gap-2">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/about">About Us</Nav.Link>
-            <Nav.Link as={Link} to="/faqs">FAQ</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+            <Nav.Link as={Link} to="/" onClick={handleNavClick}>Home</Nav.Link>
+            <Nav.Link as={Link} to="/about" onClick={handleNavClick}>About Us</Nav.Link>
+            <Nav.Link as={Link} to="/faqs" onClick={handleNavClick}>FAQ</Nav.Link>
+            <Nav.Link as={Link} to="/contact" onClick={handleNavClick}>Contact Us</Nav.Link>
 
             {/* Courses Dropdown */}
             <NavDropdown
@@ -55,7 +64,7 @@ function NavigationBar() {
                       <i className="fas fa-graduation-cap me-2"></i>
                       Browse by Category
                     </h6>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item">
+                    <NavDropdown.Item as={Link} to="/courses" className="category-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
@@ -64,7 +73,7 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="https://skyaestheticstraining.co.uk/" target="_blank" className="category-item">
+                    <NavDropdown.Item href="https://skyaestheticstraining.co.uk/" target="_blank" className="category-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                      
                         <div className="flex-grow-1">
@@ -73,7 +82,7 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item">
+                    <NavDropdown.Item as={Link} to="/courses" className="category-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
@@ -82,7 +91,7 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item">
+                    <NavDropdown.Item as={Link} to="/courses" className="category-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
@@ -97,7 +106,7 @@ function NavigationBar() {
                       <i className="fas fa-star me-2"></i>
                       Popular Courses
                     </h6>
-                    <NavDropdown.Item as={Link} to="/courses" className="popular-item">
+                    <NavDropdown.Item as={Link} to="/courses" className="popular-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                         
                         <div className="flex-grow-1">
@@ -106,7 +115,7 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="popular-item">
+                    <NavDropdown.Item as={Link} to="/courses" className="popular-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
@@ -115,7 +124,7 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="popular-item">
+                    <NavDropdown.Item as={Link} to="/courses" className="popular-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
@@ -125,7 +134,7 @@ function NavigationBar() {
                       </div>
                     </NavDropdown.Item>
                     <div className="mt-2">
-                      <NavDropdown.Item as={Link} to="/courses" className="view-all-btn">
+                      <NavDropdown.Item as={Link} to="/courses" className="view-all-btn" onClick={handleNavClick}>
                         <div className="text-center p-2 bg-primary text-white rounded">
                           <i className="fas fa-arrow-right me-2"></i>
                           View All Courses
@@ -142,6 +151,7 @@ function NavigationBar() {
               variant="outline-dark"
               size="sm"
               className="ms-2 my-2 my-lg-0 fw-semibold login-btn"
+              onClick={handleNavClick}
             >
               Login
             </Button>
@@ -154,6 +164,7 @@ function NavigationBar() {
                 border: "none",
                 color: "white",
               }}
+              onClick={handleNavClick}
             >
               Signup
             </Button>
