@@ -9,10 +9,10 @@ function ReadySection() {
         className="rounded-4 text-center text-white d-flex flex-column justify-content-center align-items-center"
         style={{
           backgroundColor: "rgba(2, 174, 241, 1)",
-          backgroundImage: `url(${ctaImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative",
+          
           overflow: "hidden",
           minHeight: "280px",
         }}

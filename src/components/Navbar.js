@@ -64,7 +64,7 @@ function NavigationBar() {
                       <i className="fas fa-graduation-cap me-2"></i>
                       Browse by Category
                     </h6>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item" onClick={handleNavClick}>
+                    <NavDropdown.Item as={Link} to="/courses?category=SEG" className="category-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
@@ -82,7 +82,7 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item" onClick={handleNavClick}>
+                    <NavDropdown.Item as={Link} to="/courses?category=PERSONS" className="category-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
@@ -91,12 +91,30 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="category-item" onClick={handleNavClick}>
+                    <NavDropdown.Item as={Link} to="/courses?category=PRO QUAL" className="category-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
                           <div className="fw-semibold">Security & Safety</div>
                           <small className="text-muted">Professional certifications</small>
+                        </div>
+                      </div>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/courses?category=SQA" className="category-item" onClick={handleNavClick}>
+                      <div className="d-flex align-items-center">
+                       
+                        <div className="flex-grow-1">
+                          <div className="fw-semibold">Taxi & Private Hire</div>
+                          <small className="text-muted">Professional driver training</small>
+                        </div>
+                      </div>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/courses?category=ICQ" className="category-item" onClick={handleNavClick}>
+                      <div className="d-flex align-items-center">
+                       
+                        <div className="flex-grow-1">
+                          <div className="fw-semibold">Education & Training</div>
+                          <small className="text-muted">Teaching and assessment qualifications</small>
                         </div>
                       </div>
                     </NavDropdown.Item>
@@ -106,16 +124,16 @@ function NavigationBar() {
                       <i className="fas fa-star me-2"></i>
                       Popular Courses
                     </h6>
-                    <NavDropdown.Item as={Link} to="/courses" className="popular-item" onClick={handleNavClick}>
+                    <NavDropdown.Item as={Link} to="/courses?category=PERSONS" className="popular-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                         
                         <div className="flex-grow-1">
-                          <div className="fw-semibold">Level 4 Laser & IPL</div>
+                          <div className="fw-semibold">Level 2 English</div>
                           <small className="text-success">Most Popular</small>
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="popular-item" onClick={handleNavClick}>
+                    <NavDropdown.Item as={Link} to="/courses?category=SEG" className="popular-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
@@ -124,7 +142,7 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses" className="popular-item" onClick={handleNavClick}>
+                    <NavDropdown.Item as={Link} to="/courses?category=ICQ" className="popular-item" onClick={handleNavClick}>
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">

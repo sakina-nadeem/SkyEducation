@@ -93,37 +93,7 @@ const courseData = {
     },
 
 
-    // PERSONS - English & Math Courses
-    {
-      id: 31,
-      title: "Level 2 Maths",
-      desc: "The Level 2 Maths course provides students with an in-depth exploration of advanced mathematical concepts and methods designed to challenge and develop sophisticated problem-solving skills. This comprehensive program covers algebraic manipulation, geometric principles, statistical analysis, and mathematical reasoning. Students will work with complex equations, graphical representations, probability calculations, and data interpretation. The course is designed to bridge the gap between basic mathematical understanding and higher-level mathematical applications required in professional and academic contexts. Emphasis is placed on developing analytical thinking, logical reasoning, and the ability to apply mathematical concepts to real-world situations. Upon completion, students will have the mathematical competency equivalent to a GCSE grade 4-9, opening pathways to further education, apprenticeships, and career opportunities in fields requiring strong numerical skills.",
-      img: getCourseImage('persons', 2),
-    },
-    {
-      id: 32,
-      title: "Level 1 Maths",
-      desc: "The Level 1 Maths course provides students with a thorough understanding of fundamental mathematical principles, focusing on basic algebra, proportions, statistics, and practical mathematical applications. This intermediate-level program builds upon entry-level mathematics, introducing more complex concepts while maintaining accessibility for learners developing their mathematical confidence. Students will work with fractions, decimals, percentages, basic algebraic expressions, and introductory statistical concepts. The course emphasizes practical applications of mathematics in everyday situations, workplace contexts, and preparation for further mathematical study. Learning activities include problem-solving exercises, data handling projects, and real-world mathematical scenarios that demonstrate the relevance and importance of mathematical skills in personal and professional life.",
-      img: getCourseImage('persons', 2),
-    },
-    {
-      id: 33,
-      title: "Entry Level 3 Maths",
-      desc: "The Entry Level 3 Maths course is designed to develop students' ability to handle mathematical information and concepts independently, with a strong focus on practical applications in everyday life and work situations. This course bridges the gap between basic numeracy and more advanced mathematical study, providing learners with the confidence and skills needed to tackle mathematical challenges. Students will work with number operations, basic geometry, data handling, and measurement concepts through engaging, real-world contexts. The program emphasizes building mathematical confidence, developing logical thinking skills, and understanding how mathematics applies to daily activities such as budgeting, shopping, cooking, and workplace tasks. Assessment methods are designed to be supportive and encouraging, helping students recognize their mathematical achievements and progress.",
-      img: getCourseImage('persons', 3),
-    },
-    {
-      id: 34,
-      title: "Entry Level 2 Maths",
-      desc: "The Entry Level 2 Maths course builds upon foundational mathematical concepts, introducing new topics including fractions, basic measurements, and elementary problem-solving techniques for everyday applications. This supportive learning environment helps students develop mathematical confidence while working with practical scenarios that demonstrate the relevance of mathematics in daily life. Students will explore number relationships, simple calculations, basic shapes and space concepts, and introductory data handling through hands-on activities and real-world examples. The course focuses on developing mathematical vocabulary, understanding numerical relationships, and building the foundation skills necessary for progression to higher levels of mathematical study. Teaching methods emphasize practical application, visual learning aids, and collaborative problem-solving to ensure all students can achieve success.",
-      img: getCourseImage('persons', 4),
-    },
-    {
-      id: 35,
-      title: "Entry Level 1 Maths",
-      desc: "The Entry Level 1 Maths course provides a supportive introduction to basic mathematical concepts and practical skills essential for daily life activities, designed specifically for learners who are beginning their mathematical journey or returning to education after a break. This foundational course covers fundamental number work, basic counting, simple calculations, recognition of shapes, and introductory measurement concepts through engaging, practical activities. Students will work with money calculations, time concepts, basic data collection, and simple problem-solving in familiar contexts. The learning environment is designed to be encouraging and non-threatening, with emphasis placed on building confidence, developing mathematical language, and recognizing mathematical concepts in everyday situations. Individual support and differentiated learning approaches ensure that every student can achieve personal success and progress.",
-      img: getCourseImage('persons', 5),
-    },
+    // PERSONS - English & Math Courses (English courses first, then Maths)
     {
       id: 36,
       title: "Level 2 English",
@@ -153,6 +123,36 @@ const courseData = {
       title: "Entry Level 1 English",
       desc: "The Entry Level 1 English course lays the foundation for effective communication by introducing essential English speaking and writing skills in a supportive, encouraging learning environment. This beginner-level course is designed for learners who are new to English or returning to formal education after an extended break. Students will learn basic vocabulary, simple sentence structures, fundamental grammar concepts, and essential communication skills for everyday situations. The course covers basic reading skills, simple writing tasks, clear speaking practice, and listening for familiar information. Learning activities are practical and engaging, focusing on immediate communication needs such as introductions, basic conversations, simple instructions, and everyday vocabulary. Individual support and differentiated teaching methods ensure that every student can progress at their own pace while building confidence in English communication.",
       img: getCourseImage('persons', 10),
+    },
+    {
+      id: 31,
+      title: "Level 2 Maths",
+      desc: "The Level 2 Maths course provides students with an in-depth exploration of advanced mathematical concepts and methods designed to challenge and develop sophisticated problem-solving skills. This comprehensive program covers algebraic manipulation, geometric principles, statistical analysis, and mathematical reasoning. Students will work with complex equations, graphical representations, probability calculations, and data interpretation. The course is designed to bridge the gap between basic mathematical understanding and higher-level mathematical applications required in professional and academic contexts. Emphasis is placed on developing analytical thinking, logical reasoning, and the ability to apply mathematical concepts to real-world situations. Upon completion, students will have the mathematical competency equivalent to a GCSE grade 4-9, opening pathways to further education, apprenticeships, and career opportunities in fields requiring strong numerical skills.",
+      img: getCourseImage('persons', 2),
+    },
+    {
+      id: 32,
+      title: "Level 1 Maths",
+      desc: "The Level 1 Maths course provides students with a thorough understanding of fundamental mathematical principles, focusing on basic algebra, proportions, statistics, and practical mathematical applications. This intermediate-level program builds upon entry-level mathematics, introducing more complex concepts while maintaining accessibility for learners developing their mathematical confidence. Students will work with fractions, decimals, percentages, basic algebraic expressions, and introductory statistical concepts. The course emphasizes practical applications of mathematics in everyday situations, workplace contexts, and preparation for further mathematical study. Learning activities include problem-solving exercises, data handling projects, and real-world mathematical scenarios that demonstrate the relevance and importance of mathematical skills in personal and professional life.",
+      img: getCourseImage('persons', 2),
+    },
+    {
+      id: 33,
+      title: "Entry Level 3 Maths",
+      desc: "The Entry Level 3 Maths course is designed to develop students' ability to handle mathematical information and concepts independently, with a strong focus on practical applications in everyday life and work situations. This course bridges the gap between basic numeracy and more advanced mathematical study, providing learners with the confidence and skills needed to tackle mathematical challenges. Students will work with number operations, basic geometry, data handling, and measurement concepts through engaging, real-world contexts. The program emphasizes building mathematical confidence, developing logical thinking skills, and understanding how mathematics applies to daily activities such as budgeting, shopping, cooking, and workplace tasks. Assessment methods are designed to be supportive and encouraging, helping students recognize their mathematical achievements and progress.",
+      img: getCourseImage('persons', 3),
+    },
+    {
+      id: 34,
+      title: "Entry Level 2 Maths",
+      desc: "The Entry Level 2 Maths course builds upon foundational mathematical concepts, introducing new topics including fractions, basic measurements, and elementary problem-solving techniques for everyday applications. This supportive learning environment helps students develop mathematical confidence while working with practical scenarios that demonstrate the relevance of mathematics in daily life. Students will explore number relationships, simple calculations, basic shapes and space concepts, and introductory data handling through hands-on activities and real-world examples. The course focuses on developing mathematical vocabulary, understanding numerical relationships, and building the foundation skills necessary for progression to higher levels of mathematical study. Teaching methods emphasize practical application, visual learning aids, and collaborative problem-solving to ensure all students can achieve success.",
+      img: getCourseImage('persons', 4),
+    },
+    {
+      id: 35,
+      title: "Entry Level 1 Maths",
+      desc: "The Entry Level 1 Maths course provides a supportive introduction to basic mathematical concepts and practical skills essential for daily life activities, designed specifically for learners who are beginning their mathematical journey or returning to education after a break. This foundational course covers fundamental number work, basic counting, simple calculations, recognition of shapes, and introductory measurement concepts through engaging, practical activities. Students will work with money calculations, time concepts, basic data collection, and simple problem-solving in familiar contexts. The learning environment is designed to be encouraging and non-threatening, with emphasis placed on building confidence, developing mathematical language, and recognizing mathematical concepts in everyday situations. Individual support and differentiated learning approaches ensure that every student can achieve personal success and progress.",
+      img: getCourseImage('persons', 5),
     },
 
     // PRO QUAL - Security & Safety Courses
@@ -244,6 +244,12 @@ const courseData = {
       desc: "The Level 5 SQA Professional Taxi & Private Hire Driver Role course provides advanced comprehensive knowledge for experienced drivers seeking to excel in the passenger transport sector, covering sophisticated customer care strategies, advanced safety protocols, and detailed industry regulations. This higher-level qualification explores complex aspects of professional driving including advanced route optimization, customer relationship management, business development principles, and leadership skills for those aspiring to supervisory or training roles. Students will develop expertise in handling challenging situations, providing specialized services for different passenger groups, and understanding the commercial aspects of the taxi and private hire industry. The course includes advanced communication techniques, conflict resolution strategies, and the development of professional networks within the transport industry.",
       img: getCourseImage('sqa', 2),
     },
+    {
+      id: 46,
+      title: "Introduction to the Role of the Professional Taxi and Private Hire",
+      desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
+      img: getCourseImage('icq', 1),
+    },
   ],
 
   SEG: [
@@ -275,36 +281,7 @@ const courseData = {
 
 
   PERSONS: [
-    {
-      id: 1,
-      title: "Level 2 Maths",
-      desc: "The Level 2 Maths course provides students with an in-depth exploration of advanced mathematical concepts and methods designed to challenge and develop sophisticated problem-solving skills. This comprehensive program covers algebraic manipulation, geometric principles, statistical analysis, and mathematical reasoning. Students will work with complex equations, graphical representations, probability calculations, and data interpretation. The course is designed to bridge the gap between basic mathematical understanding and higher-level mathematical applications required in professional and academic contexts. Emphasis is placed on developing analytical thinking, logical reasoning, and the ability to apply mathematical concepts to real-world situations. Upon completion, students will have the mathematical competency equivalent to a GCSE grade 4-9, opening pathways to further education, apprenticeships, and career opportunities in fields requiring strong numerical skills.",
-      img: getCourseImage('persons', 2),
-    },
-    {
-      id: 2,
-      title: "Level 1 Maths",
-      desc: "The Level 1 Maths course provides students with a thorough understanding of fundamental mathematical principles, focusing on basic algebra, proportions, statistics, and practical mathematical applications. This intermediate-level program builds upon entry-level mathematics, introducing more complex concepts while maintaining accessibility for learners developing their mathematical confidence. Students will work with fractions, decimals, percentages, basic algebraic expressions, and introductory statistical concepts. The course emphasizes practical applications of mathematics in everyday situations, workplace contexts, and preparation for further mathematical study. Learning activities include problem-solving exercises, data handling projects, and real-world mathematical scenarios that demonstrate the relevance and importance of mathematical skills in personal and professional life.",
-      img: getCourseImage('persons', 2),
-    },
-    {
-      id: 3,
-      title: "Entry Level 3 Maths",
-      desc: "The Entry Level 3 Maths course is designed to develop students' ability to handle mathematical information and concepts independently, with a strong focus on practical applications in everyday life and work situations. This course bridges the gap between basic numeracy and more advanced mathematical study, providing learners with the confidence and skills needed to tackle mathematical challenges. Students will work with number operations, basic geometry, data handling, and measurement concepts through engaging, real-world contexts. The program emphasizes building mathematical confidence, developing logical thinking skills, and understanding how mathematics applies to daily activities such as budgeting, shopping, cooking, and workplace tasks. Assessment methods are designed to be supportive and encouraging, helping students recognize their mathematical achievements and progress.",
-      img: getCourseImage('persons', 3),
-    },
-    {
-      id: 4,
-      title: "Entry Level 2 Maths",
-      desc: "The Entry Level 2 Maths course builds upon foundational mathematical concepts, introducing new topics including fractions, basic measurements, and elementary problem-solving techniques for everyday applications. This supportive learning environment helps students develop mathematical confidence while working with practical scenarios that demonstrate the relevance of mathematics in daily life. Students will explore number relationships, simple calculations, basic shapes and space concepts, and introductory data handling through hands-on activities and real-world examples. The course focuses on developing mathematical vocabulary, understanding numerical relationships, and building the foundation skills necessary for progression to higher levels of mathematical study. Teaching methods emphasize practical application, visual learning aids, and collaborative problem-solving to ensure all students can achieve success.",
-      img: getCourseImage('persons', 4),
-    },
-    {
-      id: 5,
-      title: "Entry Level 1 Maths",
-      desc: "The Entry Level 1 Maths course provides a supportive introduction to basic mathematical concepts and practical skills essential for daily life activities, designed specifically for learners who are beginning their mathematical journey or returning to education after a break. This foundational course covers fundamental number work, basic counting, simple calculations, recognition of shapes, and introductory measurement concepts through engaging, practical activities. Students will work with money calculations, time concepts, basic data collection, and simple problem-solving in familiar contexts. The learning environment is designed to be encouraging and non-threatening, with emphasis placed on building confidence, developing mathematical language, and recognizing mathematical concepts in everyday situations. Individual support and differentiated learning approaches ensure that every student can achieve personal success and progress.",
-      img: getCourseImage('persons', 5),
-    },
+    // English Courses (ordered from highest to lowest level)
     {
       id: 6,
       title: "Level 2 English",
@@ -334,6 +311,37 @@ const courseData = {
       title: "Entry Level 1 English",
       desc: "The Entry Level 1 English course lays the foundation for effective communication by introducing essential English speaking and writing skills in a supportive, encouraging learning environment. This beginner-level course is designed for learners who are new to English or returning to formal education after an extended break. Students will learn basic vocabulary, simple sentence structures, fundamental grammar concepts, and essential communication skills for everyday situations. The course covers basic reading skills, simple writing tasks, clear speaking practice, and listening for familiar information. Learning activities are practical and engaging, focusing on immediate communication needs such as introductions, basic conversations, simple instructions, and everyday vocabulary. Individual support and differentiated teaching methods ensure that every student can progress at their own pace while building confidence in English communication.",
       img: getCourseImage('persons', 10),
+    },
+    // Maths Courses (ordered from highest to lowest level)
+    {
+      id: 1,
+      title: "Level 2 Maths",
+      desc: "The Level 2 Maths course provides students with an in-depth exploration of advanced mathematical concepts and methods designed to challenge and develop sophisticated problem-solving skills. This comprehensive program covers algebraic manipulation, geometric principles, statistical analysis, and mathematical reasoning. Students will work with complex equations, graphical representations, probability calculations, and data interpretation. The course is designed to bridge the gap between basic mathematical understanding and higher-level mathematical applications required in professional and academic contexts. Emphasis is placed on developing analytical thinking, logical reasoning, and the ability to apply mathematical concepts to real-world situations. Upon completion, students will have the mathematical competency equivalent to a GCSE grade 4-9, opening pathways to further education, apprenticeships, and career opportunities in fields requiring strong numerical skills.",
+      img: getCourseImage('persons', 2),
+    },
+    {
+      id: 2,
+      title: "Level 1 Maths",
+      desc: "The Level 1 Maths course provides students with a thorough understanding of fundamental mathematical principles, focusing on basic algebra, proportions, statistics, and practical mathematical applications. This intermediate-level program builds upon entry-level mathematics, introducing more complex concepts while maintaining accessibility for learners developing their mathematical confidence. Students will work with fractions, decimals, percentages, basic algebraic expressions, and introductory statistical concepts. The course emphasizes practical applications of mathematics in everyday situations, workplace contexts, and preparation for further mathematical study. Learning activities include problem-solving exercises, data handling projects, and real-world mathematical scenarios that demonstrate the relevance and importance of mathematical skills in personal and professional life.",
+      img: getCourseImage('persons', 2),
+    },
+    {
+      id: 3,
+      title: "Entry Level 3 Maths",
+      desc: "The Entry Level 3 Maths course is designed to develop students' ability to handle mathematical information and concepts independently, with a strong focus on practical applications in everyday life and work situations. This course bridges the gap between basic numeracy and more advanced mathematical study, providing learners with the confidence and skills needed to tackle mathematical challenges. Students will work with number operations, basic geometry, data handling, and measurement concepts through engaging, real-world contexts. The program emphasizes building mathematical confidence, developing logical thinking skills, and understanding how mathematics applies to daily activities such as budgeting, shopping, cooking, and workplace tasks. Assessment methods are designed to be supportive and encouraging, helping students recognize their mathematical achievements and progress.",
+      img: getCourseImage('persons', 3),
+    },
+    {
+      id: 4,
+      title: "Entry Level 2 Maths",
+      desc: "The Entry Level 2 Maths course builds upon foundational mathematical concepts, introducing new topics including fractions, basic measurements, and elementary problem-solving techniques for everyday applications. This supportive learning environment helps students develop mathematical confidence while working with practical scenarios that demonstrate the relevance of mathematics in daily life. Students will explore number relationships, simple calculations, basic shapes and space concepts, and introductory data handling through hands-on activities and real-world examples. The course focuses on developing mathematical vocabulary, understanding numerical relationships, and building the foundation skills necessary for progression to higher levels of mathematical study. Teaching methods emphasize practical application, visual learning aids, and collaborative problem-solving to ensure all students can achieve success.",
+      img: getCourseImage('persons', 4),
+    },
+    {
+      id: 5,
+      title: "Entry Level 1 Maths",
+      desc: "The Entry Level 1 Maths course provides a supportive introduction to basic mathematical concepts and practical skills essential for daily life activities, designed specifically for learners who are beginning their mathematical journey or returning to education after a break. This foundational course covers fundamental number work, basic counting, simple calculations, recognition of shapes, and introductory measurement concepts through engaging, practical activities. Students will work with money calculations, time concepts, basic data collection, and simple problem-solving in familiar contexts. The learning environment is designed to be encouraging and non-threatening, with emphasis placed on building confidence, developing mathematical language, and recognizing mathematical concepts in everyday situations. Individual support and differentiated learning approaches ensure that every student can achieve personal success and progress.",
+      img: getCourseImage('persons', 5),
     },
   ],
 
@@ -371,6 +379,12 @@ const courseData = {
       desc: "The Level 5 SQA Professional Taxi & Private Hire Driver Role course provides advanced comprehensive knowledge for experienced drivers seeking to excel in the passenger transport sector, covering sophisticated customer care strategies, advanced safety protocols, and detailed industry regulations. This higher-level qualification explores complex aspects of professional driving including advanced route optimization, customer relationship management, business development principles, and leadership skills for those aspiring to supervisory or training roles. Students will develop expertise in handling challenging situations, providing specialized services for different passenger groups, and understanding the commercial aspects of the taxi and private hire industry. The course includes advanced communication techniques, conflict resolution strategies, and the development of professional networks within the transport industry.",
       img: getCourseImage('sqa', 2),
     },
+    {
+      id: 3,
+      title: "Introduction to the Role of the Professional Taxi and Private Hire",
+      desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
+      img: getCourseImage('sqa', 1),
+    },
   ],
 
   ICQ: [
@@ -378,7 +392,7 @@ const courseData = {
       id: 1,
       title: "BTEC Level 2 Certificate: Taxi & Private Hire Driver",
       desc: "This comprehensive BTEC Level 2 Certificate provides aspiring taxi and private hire drivers with all the essential knowledge required to excel in the transport industry. The course covers critical topics including road safety protocols, traffic regulations, customer service excellence, and professional conduct standards. Students will learn about legal requirements, licensing procedures, vehicle safety checks, and effective communication with passengers. Upon completion, graduates will be equipped with the confidence and expertise needed to operate safely and professionally in the competitive taxi and private hire sector, meeting all regulatory requirements while delivering exceptional customer experiences.",
-      img: getCourseImage('sqa', 1),
+      img: getCourseImage('icq', 1),
     },
     {
       id: 2,
@@ -397,6 +411,12 @@ const courseData = {
       title: "Level 3 Award in Assessing Competence at Work",
       desc: "This Level 3 Award in Assessing Competence at Work focuses specifically on developing the skills required to assess occupational competence in real workplace environments. The course provides in-depth training on competency-based assessment principles, enabling participants to evaluate whether workers can perform their job roles to the required standards. Students will learn to design assessment plans, conduct workplace observations, gather evidence of competence, and provide constructive feedback to support professional development. The program covers legal and ethical considerations, health and safety requirements, and the importance of maintaining professional relationships with candidates throughout the assessment process.",
       img: getCourseImage('icq', 4),
+    },
+    {
+      id: 46,
+      title: "Introduction to the Role of the Professional Taxi and Private Hire",
+      desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
+      img: getCourseImage('icq', 1),
     },
   ],
 

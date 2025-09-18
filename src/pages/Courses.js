@@ -12,12 +12,20 @@ const CoursesPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Handle navigation from Hero component
+  // Handle URL query parameters and navigation from Hero component
   useEffect(() => {
-    if (location.state?.selectedCategory) {
+    const urlParams = new URLSearchParams(location.search);
+    const categoryFromUrl = urlParams.get('category');
+    
+    if (categoryFromUrl) {
+      // Validate that the category exists in our courseData
+      if (courseData[categoryFromUrl]) {
+        setSelectedCategory(categoryFromUrl);
+      }
+    } else if (location.state?.selectedCategory) {
       setSelectedCategory(location.state.selectedCategory);
     }
-  }, [location.state]);
+  }, [location.search, location.state]);
 
   const categories = [
     { key: "ALL", name: "All Courses", count: courseData.ALL.length },
@@ -40,8 +48,14 @@ const CoursesPage = () => {
       );
     }
 
-    // Sort courses alphabetically by title (default)
-    courses.sort((a, b) => a.title.localeCompare(b.title));
+    // Sort courses - special handling for English & Math category
+    if (selectedCategory === "PERSONS") {
+      // For English & Math, maintain the predefined order (English first, then Maths)
+      // Don't sort alphabetically to preserve the intended grouping
+    } else {
+      // Sort courses alphabetically by title for other categories
+      courses.sort((a, b) => a.title.localeCompare(b.title));
+    }
 
     return courses;
   }, [selectedCategory, searchTerm]);
@@ -108,6 +122,12 @@ const CoursesPage = () => {
                           window.open(category.link, "_blank");
                         } else {
                           setSelectedCategory(category.key);
+                          // Update URL to reflect selected category
+                          if (category.key === "ALL") {
+                            navigate('/courses', { replace: true });
+                          } else {
+                            navigate(`/courses?category=${category.key}`, { replace: true });
+                          }
                         }
                       }}
                     >
