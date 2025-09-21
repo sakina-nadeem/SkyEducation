@@ -32,8 +32,8 @@ const App = () => {
           path="/"
           element={
             <>
-              <Hero />
               <Partner />
+              <Hero />
               <About />
               <Courses />
               <Testimonials />

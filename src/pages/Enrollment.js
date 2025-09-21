@@ -16,8 +16,6 @@ const EnrollmentPage = () => {
     email: "",
     phone: "",
     course: courseData?.title || "",
-    preferredStartDate: "",
-    studyMode: "",
     previousEducation: "",
     message: "",
     hearAboutUs: "",
@@ -58,8 +56,6 @@ const EnrollmentPage = () => {
       email: "",
       phone: "",
       course: courseData?.title || "",
-      preferredStartDate: "",
-      studyMode: "",
       previousEducation: "",
       message: "",
       hearAboutUs: "",
@@ -124,8 +120,8 @@ const EnrollmentPage = () => {
                       <h6 className="fw-bold mb-0">Phone</h6>
                     </div>
                     <p className="text-muted ms-4">
-                      <a href="tel:+447507500507" className="text-decoration-none text-muted">
-                        07507 500507
+                      <a href="tel:+4401415265555" className="text-decoration-none text-muted">
+                        0141 526 5555
                       </a>
                     </p>
                   </div>
@@ -136,8 +132,8 @@ const EnrollmentPage = () => {
                       <h6 className="fw-bold mb-0">Email</h6>
                     </div>
                     <p className="text-muted ms-4">
-                      <a href="mailto:info@skyeducation.com" className="text-decoration-none text-muted">
-                        info@skyeducation.com
+                      <a href="mailto:info@skyeducationltd.com" className="text-decoration-none text-muted">
+                        info@skyeducationltd.com
                       </a>
                     </p>
                   </div>
@@ -155,12 +151,7 @@ const EnrollmentPage = () => {
                   </div>
 
                   <div className="mt-4">
-                    <img 
-                      src={contactImg} 
-                      alt="Contact us" 
-                      className="img-fluid rounded"
-                      style={{ width: "100%", height: "200px", objectFit: "cover" }}
-                    />
+                    
                   </div>
                 </Card.Body>
               </Card>
@@ -243,36 +234,6 @@ const EnrollmentPage = () => {
                       />
                     </Form.Group>
 
-                    <Row>
-                      <Col md={6}>
-                        <Form.Group className="mb-3">
-                          <Form.Label className="fw-medium">Preferred Start Date</Form.Label>
-                          <Form.Control
-                            type="date"
-                            name="preferredStartDate"
-                            value={formData.preferredStartDate}
-                            onChange={handleInputChange}
-                          />
-                        </Form.Group>
-                      </Col>
-                      <Col md={6}>
-                        <Form.Group className="mb-3">
-                          <Form.Label className="fw-medium">Study Mode</Form.Label>
-                          <Form.Select
-                            name="studyMode"
-                            value={formData.studyMode}
-                            onChange={handleInputChange}
-                          >
-                            <option value="">Select study mode</option>
-                            <option value="full-time">Full-time</option>
-                            <option value="part-time">Part-time</option>
-                            <option value="evening">Evening Classes</option>
-                            <option value="weekend">Weekend Classes</option>
-                            <option value="online">Online Learning</option>
-                          </Form.Select>
-                        </Form.Group>
-                      </Col>
-                    </Row>
 
                     <Form.Group className="mb-3">
                       <Form.Label className="fw-medium">Previous Education/Experience</Form.Label>

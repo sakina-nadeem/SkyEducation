@@ -14,14 +14,14 @@ const getCourseImage = (category, number) => {
   
       return require(`../Assests/${category}${number}.avif`);
     } else if (category === 'proqual') {
-      return require(`../Assests/${category}${number}.jpg`);
+      return require(`../Assests/${category}${number}.avif`);
     } else if (category === 'sqa') {
       return require(`../Assests/${category}${number}.jpg`);
     } else if (category === 'icq') {
       if (number === 4) {
         return require(`../Assests/${category}${number}.webp`);
       } else {
-        return require(`../Assests/${category}${number}.jpg`);
+        return require(`../Assests/${category}${number}.avif`);
       }
     } else if (category === 'vtct') {
       if (number === 10 || number === 13 || number === 20 || number === 22) {
@@ -42,22 +42,16 @@ const courseData = {
   ALL: [
     // ICQ - Education & Training Courses
     {
-      id: 1,
-      title: "BTEC Level 2 Certificate: Taxi & Private Hire Driver",
-      desc: "This comprehensive BTEC Level 2 Certificate provides aspiring taxi and private hire drivers with all the essential knowledge required to excel in the transport industry. The course covers critical topics including road safety protocols, traffic regulations, customer service excellence, and professional conduct standards. Students will learn about legal requirements, licensing procedures, vehicle safety checks, and effective communication with passengers. Upon completion, graduates will be equipped with the confidence and expertise needed to operate safely and professionally in the competitive taxi and private hire sector, meeting all regulatory requirements while delivering exceptional customer experiences.",
-      img: getCourseImage('sqa', 1),
-    },
-    {
       id: 2,
       title: "Level 3 Award in Education & Training",
       desc: "This Level 3 Award in Education & Training is designed for individuals who want to enter the teaching profession or enhance their existing training capabilities. The course provides comprehensive coverage of fundamental teaching principles, including understanding learner needs, planning effective sessions, and delivering engaging educational content. Participants will explore diverse teaching methodologies, assessment techniques, and classroom management strategies. The program emphasizes the importance of inclusive education, professional ethics, and continuous professional development. Graduates will gain the skills necessary to design, deliver, and evaluate training sessions across various educational settings, from corporate training environments to adult education centers.",
-      img: getCourseImage('icq', 2),
+      img: getCourseImage('icq', 1),
     },
     {
       id: 3,
       title: "Level 3 Certificate in Assessing Vocational Achievement",
       desc: "The Level 3 Certificate in Assessing Vocational Achievement is a comprehensive qualification that prepares individuals to become competent vocational assessors across diverse industry sectors. This course covers the complete assessment cycle, from initial planning and preparation through to final evaluation and feedback delivery. Students will master various assessment methods including observation, questioning, professional discussions, and portfolio reviews. The program emphasizes fair, valid, and reliable assessment practices while ensuring compliance with awarding body requirements. Participants will develop expertise in supporting learners through their qualification journey, maintaining accurate records, and contributing to quality assurance processes within their organizations.",
-      img: getCourseImage('icq', 3),
+      img: getCourseImage('icq', 2),
     },
     {
       id: 4,
@@ -93,7 +87,7 @@ const courseData = {
     },
 
 
-    // PERSONS - English & Math Courses (English courses first, then Maths)
+    // PERSONS - English & Math Courses (English courses first with IDs 36-40, then Maths with IDs 31-35)
     {
       id: 36,
       title: "Level 2 English",
@@ -160,19 +154,43 @@ const courseData = {
       id: 41,
       title: "Level 2 Award in Site Security",
       desc: "The Level 2 Award in Site Security provides students with a comprehensive foundation in modern security principles, risk assessment methodologies, and workplace safety protocols essential for professional security operations. This course covers fundamental security concepts including threat identification, access control systems, surveillance techniques, and emergency response procedures. Students will learn about legal frameworks governing security work, professional conduct standards, and the importance of maintaining confidentiality and integrity. The program includes practical training in security equipment usage, report writing, communication skills, and conflict resolution techniques. Emphasis is placed on understanding security risks in different environments, developing situational awareness, and implementing appropriate security measures to protect people, property, and assets.",
-      img: getCourseImage('proqual', 2),
+      img: getCourseImage('proqual', 9),
     },
     {
       id: 42,
       title: "Level 2 First Aid",
       desc: "The Level 2 First Aid course provides comprehensive training in essential life-saving skills, equipping participants with the knowledge and confidence to respond effectively to medical emergencies and accident situations. This intensive program covers CPR techniques, wound management, shock treatment, and the management of various medical conditions including heart attacks, strokes, and breathing difficulties. Students will learn to assess emergency situations, prioritize treatment, and provide appropriate care while awaiting professional medical assistance. The course includes hands-on practical training with mannequins, role-playing scenarios, and the use of first aid equipment. Participants will develop skills in patient assessment, communication with emergency services, and maintaining accurate records of treatment provided. This qualification is essential for workplace first aiders and anyone seeking to develop potentially life-saving skills.",
-      img: getCourseImage('proqual', 2),
+      img: getCourseImage('proqual', 10),
     },
     {
       id: 43,
       title: "Level 1 Health & Safety in Construction",
       desc: "The Level 1 Health & Safety in Construction course provides a comprehensive introduction to essential health and safety practices, regulations, and responsibilities within the construction sector. This foundational program covers key topics including hazard identification, risk assessment procedures, personal protective equipment usage, and safe working practices on construction sites. Students will learn about legal requirements, accident prevention strategies, emergency procedures, and the importance of maintaining a safety-first culture in construction environments. The course includes practical elements such as site safety inspections, safety equipment demonstrations, and case study analyses of construction accidents. Emphasis is placed on developing safety awareness, understanding regulatory compliance requirements, and building the knowledge foundation necessary for safe participation in construction activities.",
-      img: getCourseImage('proqual', 3),
+      img: getCourseImage('proqual', 4),
+    },
+    {
+      id: 63,
+      title: "Award External Quality Assurance of Assessment Process and Practice",
+      desc: "LEVEL 4 - This Level 4 Award in External Quality Assurance provides comprehensive training for professionals responsible for maintaining assessment quality across multiple organizations and assessment centers. The course covers external quality assurance systems, cross-organizational assessment monitoring, standardization processes, and regulatory compliance requirements. Students will develop skills in conducting external quality reviews, supporting assessment center development, ensuring assessment validity across different contexts, and implementing effective external quality management systems.",
+      img: getCourseImage('proqual', 5),
+    },
+    {
+      id: 64,
+      title: "Award in the Internal Quality Assurance of Assessment Process + Practice",
+      desc: "LEVEL 4 - This Level 4 Award in Internal Quality Assurance provides specialized training for professionals responsible for maintaining and improving assessment quality within educational and training organizations. The course covers internal quality assurance frameworks, assessment verification procedures, team leadership, and continuous improvement strategies. Students will gain expertise in supporting assessor development, ensuring assessment reliability, and implementing effective internal quality management approaches.",
+      img: getCourseImage('proqual', 6),
+    },
+    {
+      id: 65,
+      title: "Award in Understanding the External Quality Assurance Process and Practice",
+      desc: "LEVEL 4 - This Level 4 Award provides foundational understanding of external quality assurance principles and practices in assessment environments. The course covers external quality assurance frameworks, regulatory requirements, compliance procedures, and best practice methodologies. Students will gain knowledge of external verification processes, inter-organizational quality standards, and effective approaches to maintaining assessment quality across different educational and training contexts.",
+      img: getCourseImage('proqual', 7),
+    },
+    {
+      id: 66,
+      title: "Certificate in Leading the Internal Quality Assurance of Assessment Processes and Practice",
+      desc: "LEVEL 4 - This Level 4 Certificate provides advanced training for senior professionals leading internal quality assurance teams and processes within educational organizations. The course covers strategic quality management, team leadership, organizational development, and advanced quality assurance methodologies. Students will develop expertise in leading quality improvement initiatives, managing assessment teams, and implementing organizational quality strategies that ensure excellence in assessment practices.",
+      img: getCourseImage('proqual', 8),
     },
 
     // VTCT - ITEC ESOL Certificate Courses
@@ -230,12 +248,60 @@ const courseData = {
       desc: "LEVEL 3 - This expert-level ITEC ESOL Certificate International at Level 3 provides the highest standard of English language training for students seeking professional and academic excellence. The course covers sophisticated linguistic analysis, advanced academic writing, and expert-level communication skills. Students will master complex language concepts, develop research and presentation capabilities, and achieve the language proficiency required for university study, professional leadership, and international career opportunities.",
       img: getCourseImage('vtct', 9),
     },
+    {
+      id: 47,
+      title: "ITEC ESOL CERTIFICATE INTERNATIONAL",
+      desc: "LEVEL 1 B2 - This comprehensive ITEC ESOL Certificate International at Level 1 B2 provides upper-intermediate English language training for students seeking advanced communication proficiency. The course covers sophisticated grammar structures, extensive vocabulary development, and enhanced communication abilities across all four language skills. Students will engage with complex texts, develop academic writing skills, and build confidence in professional communication contexts.",
+      img: getCourseImage('vtct', 11),
+    },
+    {
+      id: 48,
+      title: "ITEC ESOL CERTIFICATE INTERNATIONAL",
+      desc: "LEVEL 2 C1 - This advanced ITEC ESOL Certificate International at Level 2 C1 provides high-level English language training for students seeking near-native proficiency. The course covers complex linguistic structures, advanced vocabulary expansion, and sophisticated communication techniques. Students will develop critical thinking skills, analytical writing abilities, and confident presentation skills for academic and professional excellence.",
+      img: getCourseImage('vtct', 12),
+    },
+    {
+      id: 49,
+      title: "ITEC ESOL CERTIFICATE INTERNATIONAL",
+      desc: "LEVEL 3 C2 - This expert-level ITEC ESOL Certificate International at Level 3 C2 provides the highest standard of English language proficiency for students seeking mastery-level communication skills. The course covers sophisticated linguistic analysis, advanced academic writing, and expert-level communication abilities. Students will achieve the language proficiency required for university study, professional leadership, and international career opportunities.",
+      img: getCourseImage('vtct', 13),
+    },
+    {
+      id: 50,
+      title: "FUNCTIONAL SKILLS ENGLISH",
+      desc: "LEVEL 1 - This comprehensive Functional Skills English at Level 1 provides intermediate English language training focusing on practical communication skills for everyday and workplace situations. The course covers reading comprehension, writing skills, speaking and listening abilities that are directly applicable to real-world contexts. Students will develop the language competencies needed for further education, employment opportunities, and effective participation in community life.",
+      img: getCourseImage('vtct', 14),
+    },
+    {
+      id: 51,
+      title: "FUNCTIONAL SKILLS MATHS",
+      desc: "LEVEL 2 - This advanced Functional Skills Maths at Level 2 provides comprehensive mathematical training focusing on practical problem-solving skills for everyday and workplace situations. The course covers numerical calculations, statistical analysis, algebraic manipulation, and geometric applications that are directly relevant to real-world contexts. Students will develop the mathematical competencies needed for further education, employment opportunities, and professional advancement.",
+      img: getCourseImage('vtct', 15),
+    },
+    {
+      id: 52,
+      title: "FUNCTIONAL SKILLS ENGLISH",
+      desc: "LEVEL 2 - This advanced Functional Skills English at Level 2 provides sophisticated communication training focusing on practical language skills for professional and academic contexts. The course covers advanced reading comprehension, complex writing tasks, confident speaking abilities, and critical listening skills. Students will develop the high-level language competencies needed for career advancement, further education, and leadership roles.",
+      img: getCourseImage('vtct', 16),
+    },
+    {
+      id: 53,
+      title: "FUNCTIONAL SKILLS MATHS",
+      desc: "LEVEL 2 - This advanced Functional Skills Maths at Level 2 provides comprehensive mathematical training focusing on practical problem-solving skills for professional and academic contexts. The course covers complex calculations, statistical analysis, algebraic problem-solving, and geometric applications. Students will develop the advanced mathematical competencies needed for career progression, higher education, and technical roles.",
+      img: getCourseImage('vtct', 17),
+    },
+    {
+      id: 54,
+      title: "Award in Invigilating Remote Tests and Examinations",
+      desc: "This specialized award provides comprehensive training for individuals seeking to become qualified invigilators for remote testing and examination environments. The course covers essential skills including digital platform management, remote monitoring techniques, security protocols, and student support procedures. Participants will learn about academic integrity, technical troubleshooting, and the unique challenges of online assessment environments. This qualification is essential for educational institutions, professional bodies, and organizations conducting remote examinations.",
+      img: getCourseImage('vtct', 18),
+    },
 
     // SQA - Taxi & Private Hire Courses
     {
       id: 44,
-      title: "Level 2 SQA iCQ: Professional Taxi & Private Hire Driver",
-      desc: "The Level 2 SQA iCQ Professional Taxi & Private Hire Driver course introduces aspiring drivers to the comprehensive professional standards required in the passenger transport industry, with particular focus on safety protocols, regulatory compliance, and customer service excellence. This specialized program covers essential topics including local area knowledge, route planning, passenger safety procedures, and professional conduct standards. Students will learn about licensing requirements, vehicle maintenance responsibilities, fare calculation methods, and effective communication with diverse passengers. The course emphasizes the importance of providing exceptional customer service, managing difficult situations professionally, and maintaining high standards of personal and vehicle presentation. Practical elements include navigation skills, customer interaction scenarios, and understanding of accessibility requirements for passengers with special needs.",
+      title: "Level 2 SQA: Professional Taxi & Private Hire Driver",
+      desc: "The Level 2 SQA Professional Taxi & Private Hire Driver course introduces aspiring drivers to the comprehensive professional standards required in the passenger transport industry, with particular focus on safety protocols, regulatory compliance, and customer service excellence. This specialized program covers essential topics including local area knowledge, route planning, passenger safety procedures, and professional conduct standards. Students will learn about licensing requirements, vehicle maintenance responsibilities, fare calculation methods, and effective communication with diverse passengers. The course emphasizes the importance of providing exceptional customer service, managing difficult situations professionally, and maintaining high standards of personal and vehicle presentation. Practical elements include navigation skills, customer interaction scenarios, and understanding of accessibility requirements for passengers with special needs.",
       img: getCourseImage('sqa', 1),
     },
     {
@@ -249,6 +315,54 @@ const courseData = {
       title: "Introduction to the Role of the Professional Taxi and Private Hire",
       desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
       img: getCourseImage('icq', 1),
+    },
+    {
+      id: 55,
+      title: "Award in Education and Training",
+      desc: "LEVEL 3 - This Level 3 Award in Education and Training provides comprehensive foundation training for individuals entering the education and training sector. The course covers essential teaching principles, learning theories, and practical training delivery methods. Students will develop skills in session planning, learner engagement, and basic assessment techniques. This qualification is ideal for new trainers, workplace mentors, and those seeking to develop their training capabilities in professional environments.",
+      img: getCourseImage('icq', 5),
+    },
+    {
+      id: 56,
+      title: "Diploma in Education and Training",
+      desc: "LEVEL 5 - This comprehensive Level 5 Diploma in Education and Training provides advanced qualification for experienced educators and training professionals. The course covers sophisticated teaching methodologies, curriculum development, educational leadership, and advanced assessment strategies. Students will master complex pedagogical approaches, research methods, and quality assurance processes essential for senior roles in education and training organizations.",
+      img: getCourseImage('icq', 6),
+    },
+    {
+      id: 57,
+      title: "Diploma in Teaching (Further Education and Skills)",
+      desc: "LEVEL 5 - This specialized Level 5 Diploma in Teaching for Further Education and Skills sector provides comprehensive training for teachers working in colleges, adult education, and vocational training environments. The course covers advanced teaching techniques, curriculum planning, student support strategies, and sector-specific regulatory requirements. Students will develop expertise in delivering education to diverse learner groups with varying educational backgrounds and career aspirations.",
+      img: getCourseImage('icq', 7),
+    },
+    {
+      id: 58,
+      title: "Certificate in Education and Training",
+      desc: "LEVEL 4 - This Level 4 Certificate in Education and Training provides intermediate-level qualification for developing education professionals. The course covers advanced teaching methods, assessment design, inclusive learning practices, and professional development planning. Students will enhance their pedagogical skills, develop critical reflection abilities, and gain competencies required for progression to higher-level teaching qualifications.",
+      img: getCourseImage('icq', 8),
+    },
+    {
+      id: 59,
+      title: "Diploma in Teaching",
+      desc: "LEVEL 5 - This comprehensive Level 5 Diploma in Teaching provides advanced qualification for professional educators seeking senior teaching roles. The course covers sophisticated pedagogical approaches, educational research, leadership in learning environments, and advanced assessment methodologies. Students will develop expertise in educational innovation, quality enhancement, and strategic curriculum development.",
+      img: getCourseImage('icq', 9),
+    },
+    {
+      id: 60,
+      title: "Certificate in Assessing Vocational Achievements",
+      desc: "LEVEL 3 - This Level 3 Certificate in Assessing Vocational Achievements provides specialized training for assessment professionals in vocational education settings. The course covers assessment planning, evidence gathering, quality assurance, and feedback delivery. Students will develop expertise in fair and reliable assessment practices, supporting learner progression, and maintaining assessment standards across diverse vocational disciplines.",
+      img: getCourseImage('icq', 10),
+    },
+    {
+      id: 61,
+      title: "Award in Internal Quality Assurance of Assessment Processes and Practice",
+      desc: "LEVEL 4 - This Level 4 Award in Internal Quality Assurance provides comprehensive training for professionals responsible for maintaining assessment quality within educational organizations. The course covers quality assurance systems, assessment monitoring, standardization processes, and continuous improvement methodologies. Students will develop skills in supporting assessor development, ensuring assessment validity, and implementing effective quality management systems.",
+      img: getCourseImage('icq', 11),
+    },
+    {
+      id: 62,
+      title: "Award in Understanding the Internal Quality Assurance of Assessment Processes and Practice",
+      desc: "LEVEL 4 - This Level 4 Award provides foundational understanding of internal quality assurance principles and practices in assessment environments. The course covers quality assurance frameworks, assessment verification, team leadership, and continuous improvement strategies. Students will gain knowledge of regulatory requirements, best practice methodologies, and effective quality management approaches essential for educational quality assurance roles.",
+      img: getCourseImage('icq', 12),
     },
   ],
 
@@ -281,64 +395,64 @@ const courseData = {
 
 
   PERSONS: [
-    // English Courses (ordered from highest to lowest level)
+    // English Courses (sequential IDs 1-5, ordered from highest to lowest level)
     {
-      id: 6,
+      id: 1,
       title: "Level 2 English",
       desc: "The Level 2 English course is designed to develop fluent communication skills suitable for diverse personal, educational, and professional contexts, significantly enhancing both spoken and written English capabilities. This comprehensive program covers advanced grammar structures, vocabulary expansion, critical reading skills, and sophisticated writing techniques. Students will engage with various text types including literature, reports, articles, and creative writing, developing analytical and interpretative skills. The course emphasizes effective communication in different contexts, presentation skills, and the ability to adapt language and style to suit specific audiences and purposes. Practical activities include essay writing, oral presentations, group discussions, and creative projects that build confidence and competency in English language use at an advanced level.",
       img: getCourseImage('persons', 6),
     },
     {
-      id: 7,
+      id: 2,
       title: "Level 1 English",
       desc: "The Level 1 English course helps students refine their command of English, developing independent communication skills suitable for both professional and personal contexts. This intermediate-level program focuses on improving written and spoken English through structured learning activities, grammar development, and vocabulary expansion. Students will work with different text types, practice formal and informal writing styles, and develop confidence in speaking and listening skills. The course covers essential communication skills including letter writing, report preparation, reading comprehension, and verbal communication techniques. Emphasis is placed on developing critical thinking skills, understanding different writing purposes, and building the language competencies needed for further education, employment opportunities, and effective participation in community life.",
       img: getCourseImage('persons', 7),
     },
     {
-      id: 8,
+      id: 3,
       title: "Entry Level 3 English",
       desc: "The Entry Level 3 English course prepares students for practical usage of English, focusing on developing skills to engage effectively in real-world communication tasks and social interactions. This course builds upon basic English skills, introducing more complex language structures, extended vocabulary, and varied communication scenarios. Students will practice reading different types of texts, writing for various purposes, speaking in different situations, and listening for specific information. The program emphasizes functional English skills that are directly applicable to everyday life, including completing forms, understanding instructions, participating in discussions, and expressing opinions clearly. Learning activities are designed to be engaging and relevant, helping students develop confidence in using English in community, workplace, and educational settings.",
       img: getCourseImage('persons', 8),
     },
     {
-      id: 9,
+      id: 4,
       title: "Entry Level 2 English",
       desc: "The Entry Level 2 English course focuses on enhancing basic communication skills through improved vocabulary development and structured sentence formation, building upon foundational English knowledge. Students will work on expanding their word knowledge, understanding basic grammar rules, and developing more complex communication abilities. The course covers reading simple texts, writing basic sentences and paragraphs, speaking clearly in familiar situations, and listening to understand key information. Learning activities include vocabulary building exercises, guided writing tasks, structured conversation practice, and reading comprehension activities using accessible texts. The supportive learning environment encourages students to practice their English skills confidently, with emphasis on practical communication that can be immediately applied in daily life situations.",
       img: getCourseImage('persons', 9),
     },
     {
-      id: 10,
+      id: 5,
       title: "Entry Level 1 English",
       desc: "The Entry Level 1 English course lays the foundation for effective communication by introducing essential English speaking and writing skills in a supportive, encouraging learning environment. This beginner-level course is designed for learners who are new to English or returning to formal education after an extended break. Students will learn basic vocabulary, simple sentence structures, fundamental grammar concepts, and essential communication skills for everyday situations. The course covers basic reading skills, simple writing tasks, clear speaking practice, and listening for familiar information. Learning activities are practical and engaging, focusing on immediate communication needs such as introductions, basic conversations, simple instructions, and everyday vocabulary. Individual support and differentiated teaching methods ensure that every student can progress at their own pace while building confidence in English communication.",
       img: getCourseImage('persons', 10),
     },
-    // Maths Courses (ordered from highest to lowest level)
+    // Maths Courses (sequential IDs 6-10, ordered from highest to lowest level)
     {
-      id: 1,
+      id: 6,
       title: "Level 2 Maths",
       desc: "The Level 2 Maths course provides students with an in-depth exploration of advanced mathematical concepts and methods designed to challenge and develop sophisticated problem-solving skills. This comprehensive program covers algebraic manipulation, geometric principles, statistical analysis, and mathematical reasoning. Students will work with complex equations, graphical representations, probability calculations, and data interpretation. The course is designed to bridge the gap between basic mathematical understanding and higher-level mathematical applications required in professional and academic contexts. Emphasis is placed on developing analytical thinking, logical reasoning, and the ability to apply mathematical concepts to real-world situations. Upon completion, students will have the mathematical competency equivalent to a GCSE grade 4-9, opening pathways to further education, apprenticeships, and career opportunities in fields requiring strong numerical skills.",
       img: getCourseImage('persons', 2),
     },
     {
-      id: 2,
+      id: 7,
       title: "Level 1 Maths",
       desc: "The Level 1 Maths course provides students with a thorough understanding of fundamental mathematical principles, focusing on basic algebra, proportions, statistics, and practical mathematical applications. This intermediate-level program builds upon entry-level mathematics, introducing more complex concepts while maintaining accessibility for learners developing their mathematical confidence. Students will work with fractions, decimals, percentages, basic algebraic expressions, and introductory statistical concepts. The course emphasizes practical applications of mathematics in everyday situations, workplace contexts, and preparation for further mathematical study. Learning activities include problem-solving exercises, data handling projects, and real-world mathematical scenarios that demonstrate the relevance and importance of mathematical skills in personal and professional life.",
       img: getCourseImage('persons', 2),
     },
     {
-      id: 3,
+      id: 8,
       title: "Entry Level 3 Maths",
       desc: "The Entry Level 3 Maths course is designed to develop students' ability to handle mathematical information and concepts independently, with a strong focus on practical applications in everyday life and work situations. This course bridges the gap between basic numeracy and more advanced mathematical study, providing learners with the confidence and skills needed to tackle mathematical challenges. Students will work with number operations, basic geometry, data handling, and measurement concepts through engaging, real-world contexts. The program emphasizes building mathematical confidence, developing logical thinking skills, and understanding how mathematics applies to daily activities such as budgeting, shopping, cooking, and workplace tasks. Assessment methods are designed to be supportive and encouraging, helping students recognize their mathematical achievements and progress.",
       img: getCourseImage('persons', 3),
     },
     {
-      id: 4,
+      id: 9,
       title: "Entry Level 2 Maths",
       desc: "The Entry Level 2 Maths course builds upon foundational mathematical concepts, introducing new topics including fractions, basic measurements, and elementary problem-solving techniques for everyday applications. This supportive learning environment helps students develop mathematical confidence while working with practical scenarios that demonstrate the relevance of mathematics in daily life. Students will explore number relationships, simple calculations, basic shapes and space concepts, and introductory data handling through hands-on activities and real-world examples. The course focuses on developing mathematical vocabulary, understanding numerical relationships, and building the foundation skills necessary for progression to higher levels of mathematical study. Teaching methods emphasize practical application, visual learning aids, and collaborative problem-solving to ensure all students can achieve success.",
       img: getCourseImage('persons', 4),
     },
     {
-      id: 5,
+      id: 10,
       title: "Entry Level 1 Maths",
       desc: "The Entry Level 1 Maths course provides a supportive introduction to basic mathematical concepts and practical skills essential for daily life activities, designed specifically for learners who are beginning their mathematical journey or returning to education after a break. This foundational course covers fundamental number work, basic counting, simple calculations, recognition of shapes, and introductory measurement concepts through engaging, practical activities. Students will work with money calculations, time concepts, basic data collection, and simple problem-solving in familiar contexts. The learning environment is designed to be encouraging and non-threatening, with emphasis placed on building confidence, developing mathematical language, and recognizing mathematical concepts in everyday situations. Individual support and differentiated learning approaches ensure that every student can achieve personal success and progress.",
       img: getCourseImage('persons', 5),
@@ -350,27 +464,51 @@ const courseData = {
       id: 1,
       title: "Level 2 Award in Site Security",
       desc: "The Level 2 Award in Site Security provides students with a comprehensive foundation in modern security principles, risk assessment methodologies, and workplace safety protocols essential for professional security operations. This course covers fundamental security concepts including threat identification, access control systems, surveillance techniques, and emergency response procedures. Students will learn about legal frameworks governing security work, professional conduct standards, and the importance of maintaining confidentiality and integrity. The program includes practical training in security equipment usage, report writing, communication skills, and conflict resolution techniques. Emphasis is placed on understanding security risks in different environments, developing situational awareness, and implementing appropriate security measures to protect people, property, and assets.",
-      img: getCourseImage('proqual', 2),
+      img: getCourseImage('proqual', 9),
     },
     {
       id: 2,
       title: "Level 2 First Aid",
       desc: "The Level 2 First Aid course provides comprehensive training in essential life-saving skills, equipping participants with the knowledge and confidence to respond effectively to medical emergencies and accident situations. This intensive program covers CPR techniques, wound management, shock treatment, and the management of various medical conditions including heart attacks, strokes, and breathing difficulties. Students will learn to assess emergency situations, prioritize treatment, and provide appropriate care while awaiting professional medical assistance. The course includes hands-on practical training with mannequins, role-playing scenarios, and the use of first aid equipment. Participants will develop skills in patient assessment, communication with emergency services, and maintaining accurate records of treatment provided. This qualification is essential for workplace first aiders and anyone seeking to develop potentially life-saving skills.",
-      img: getCourseImage('proqual', 2),
+      img: getCourseImage('proqual', 10),
     },
     {
       id: 3,
       title: "Level 1 Health & Safety in Construction",
       desc: "The Level 1 Health & Safety in Construction course provides a comprehensive introduction to essential health and safety practices, regulations, and responsibilities within the construction sector. This foundational program covers key topics including hazard identification, risk assessment procedures, personal protective equipment usage, and safe working practices on construction sites. Students will learn about legal requirements, accident prevention strategies, emergency procedures, and the importance of maintaining a safety-first culture in construction environments. The course includes practical elements such as site safety inspections, safety equipment demonstrations, and case study analyses of construction accidents. Emphasis is placed on developing safety awareness, understanding regulatory compliance requirements, and building the knowledge foundation necessary for safe participation in construction activities.",
-      img: getCourseImage('proqual', 3),
+      img: getCourseImage('proqual', 4),
+    },
+    {
+      id: 4,
+      title: "Award External Quality Assurance of Assessment Process and Practice",
+      desc: "LEVEL 4 - This Level 4 Award in External Quality Assurance provides comprehensive training for professionals responsible for maintaining assessment quality across multiple organizations and assessment centers. The course covers external quality assurance systems, cross-organizational assessment monitoring, standardization processes, and regulatory compliance requirements. Students will develop skills in conducting external quality reviews, supporting assessment center development, ensuring assessment validity across different contexts, and implementing effective external quality management systems.",
+      img: getCourseImage('proqual', 5),
+    },
+    {
+      id: 5,
+      title: "Award in the Internal Quality Assurance of Assessment Process + Practice",
+      desc: "LEVEL 4 - This Level 4 Award in Internal Quality Assurance provides specialized training for professionals responsible for maintaining and improving assessment quality within educational and training organizations. The course covers internal quality assurance frameworks, assessment verification procedures, team leadership, and continuous improvement strategies. Students will gain expertise in supporting assessor development, ensuring assessment reliability, and implementing effective internal quality management approaches.",
+      img: getCourseImage('proqual', 6),
+    },
+    {
+      id: 6,
+      title: "Award in Understanding the External Quality Assurance Process and Practice",
+      desc: "LEVEL 4 - This Level 4 Award provides foundational understanding of external quality assurance principles and practices in assessment environments. The course covers external quality assurance frameworks, regulatory requirements, compliance procedures, and best practice methodologies. Students will gain knowledge of external verification processes, inter-organizational quality standards, and effective approaches to maintaining assessment quality across different educational and training contexts.",
+      img: getCourseImage('proqual', 7),
+    },
+    {
+      id: 7,
+      title: "Certificate in Leading the Internal Quality Assurance of Assessment Processes and Practice",
+      desc: "LEVEL 4 - This Level 4 Certificate provides advanced training for senior professionals leading internal quality assurance teams and processes within educational organizations. The course covers strategic quality management, team leadership, organizational development, and advanced quality assurance methodologies. Students will develop expertise in leading quality improvement initiatives, managing assessment teams, and implementing organizational quality strategies that ensure excellence in assessment practices.",
+      img: getCourseImage('proqual', 8),
     },
   ],
 
   SQA: [
     {
       id: 1,
-      title: "Level 2 SQA iCQ: Professional Taxi & Private Hire Driver",
-      desc: "The Level 2 SQA iCQ Professional Taxi & Private Hire Driver course introduces aspiring drivers to the comprehensive professional standards required in the passenger transport industry, with particular focus on safety protocols, regulatory compliance, and customer service excellence. This specialized program covers essential topics including local area knowledge, route planning, passenger safety procedures, and professional conduct standards. Students will learn about licensing requirements, vehicle maintenance responsibilities, fare calculation methods, and effective communication with diverse passengers. The course emphasizes the importance of providing exceptional customer service, managing difficult situations professionally, and maintaining high standards of personal and vehicle presentation. Practical elements include navigation skills, customer interaction scenarios, and understanding of accessibility requirements for passengers with special needs.",
+      title: "Level 2 SQA: Professional Taxi & Private Hire Driver",
+      desc: "The Level 2 SQA Professional Taxi & Private Hire Driver course introduces aspiring drivers to the comprehensive professional standards required in the passenger transport industry, with particular focus on safety protocols, regulatory compliance, and customer service excellence. This specialized program covers essential topics including local area knowledge, route planning, passenger safety procedures, and professional conduct standards. Students will learn about licensing requirements, vehicle maintenance responsibilities, fare calculation methods, and effective communication with diverse passengers. The course emphasizes the importance of providing exceptional customer service, managing difficult situations professionally, and maintaining high standards of personal and vehicle presentation. Practical elements include navigation skills, customer interaction scenarios, and understanding of accessibility requirements for passengers with special needs.",
       img: getCourseImage('sqa', 1),
     },
     {
@@ -388,12 +526,6 @@ const courseData = {
   ],
 
   ICQ: [
-    {
-      id: 1,
-      title: "BTEC Level 2 Certificate: Taxi & Private Hire Driver",
-      desc: "This comprehensive BTEC Level 2 Certificate provides aspiring taxi and private hire drivers with all the essential knowledge required to excel in the transport industry. The course covers critical topics including road safety protocols, traffic regulations, customer service excellence, and professional conduct standards. Students will learn about legal requirements, licensing procedures, vehicle safety checks, and effective communication with passengers. Upon completion, graduates will be equipped with the confidence and expertise needed to operate safely and professionally in the competitive taxi and private hire sector, meeting all regulatory requirements while delivering exceptional customer experiences.",
-      img: getCourseImage('icq', 1),
-    },
     {
       id: 2,
       title: "Level 3 Award in Education & Training",
@@ -417,6 +549,54 @@ const courseData = {
       title: "Introduction to the Role of the Professional Taxi and Private Hire",
       desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
       img: getCourseImage('icq', 1),
+    },
+    {
+      id: 5,
+      title: "Award in Education and Training",
+      desc: "LEVEL 3 - This Level 3 Award in Education and Training provides comprehensive foundation training for individuals entering the education and training sector. The course covers essential teaching principles, learning theories, and practical training delivery methods. Students will develop skills in session planning, learner engagement, and basic assessment techniques. This qualification is ideal for new trainers, workplace mentors, and those seeking to develop their training capabilities in professional environments.",
+      img: getCourseImage('icq', 5),
+    },
+    {
+      id: 6,
+      title: "Diploma in Education and Training",
+      desc: "LEVEL 5 - This comprehensive Level 5 Diploma in Education and Training provides advanced qualification for experienced educators and training professionals. The course covers sophisticated teaching methodologies, curriculum development, educational leadership, and advanced assessment strategies. Students will master complex pedagogical approaches, research methods, and quality assurance processes essential for senior roles in education and training organizations.",
+      img: getCourseImage('icq', 6),
+    },
+    {
+      id: 7,
+      title: "Diploma in Teaching (Further Education and Skills)",
+      desc: "LEVEL 5 - This specialized Level 5 Diploma in Teaching for Further Education and Skills sector provides comprehensive training for teachers working in colleges, adult education, and vocational training environments. The course covers advanced teaching techniques, curriculum planning, student support strategies, and sector-specific regulatory requirements. Students will develop expertise in delivering education to diverse learner groups with varying educational backgrounds and career aspirations.",
+      img: getCourseImage('icq', 7),
+    },
+    {
+      id: 8,
+      title: "Certificate in Education and Training",
+      desc: "LEVEL 4 - This Level 4 Certificate in Education and Training provides intermediate-level qualification for developing education professionals. The course covers advanced teaching methods, assessment design, inclusive learning practices, and professional development planning. Students will enhance their pedagogical skills, develop critical reflection abilities, and gain competencies required for progression to higher-level teaching qualifications.",
+      img: getCourseImage('icq', 8),
+    },
+    {
+      id: 9,
+      title: "Diploma in Teaching",
+      desc: "LEVEL 5 - This comprehensive Level 5 Diploma in Teaching provides advanced qualification for professional educators seeking senior teaching roles. The course covers sophisticated pedagogical approaches, educational research, leadership in learning environments, and advanced assessment methodologies. Students will develop expertise in educational innovation, quality enhancement, and strategic curriculum development.",
+      img: getCourseImage('icq', 9),
+    },
+    {
+      id: 10,
+      title: "Certificate in Assessing Vocational Achievements",
+      desc: "LEVEL 3 - This Level 3 Certificate in Assessing Vocational Achievements provides specialized training for assessment professionals in vocational education settings. The course covers assessment planning, evidence gathering, quality assurance, and feedback delivery. Students will develop expertise in fair and reliable assessment practices, supporting learner progression, and maintaining assessment standards across diverse vocational disciplines.",
+      img: getCourseImage('icq', 10),
+    },
+    {
+      id: 11,
+      title: "Award in Internal Quality Assurance of Assessment Processes and Practice",
+      desc: "LEVEL 4 - This Level 4 Award in Internal Quality Assurance provides comprehensive training for professionals responsible for maintaining assessment quality within educational organizations. The course covers quality assurance systems, assessment monitoring, standardization processes, and continuous improvement methodologies. Students will develop skills in supporting assessor development, ensuring assessment validity, and implementing effective quality management systems.",
+      img: getCourseImage('icq', 11),
+    },
+    {
+      id: 12,
+      title: "Award in Understanding the Internal Quality Assurance of Assessment Processes and Practice",
+      desc: "LEVEL 4 - This Level 4 Award provides foundational understanding of internal quality assurance principles and practices in assessment environments. The course covers quality assurance frameworks, assessment verification, team leadership, and continuous improvement strategies. Students will gain knowledge of regulatory requirements, best practice methodologies, and effective quality management approaches essential for educational quality assurance roles.",
+      img: getCourseImage('icq', 12),
     },
   ],
 
@@ -473,7 +653,55 @@ const courseData = {
       id: 9,
       title: "ITEC ESOL CERTIFICATE INTERNATIONAL",
       desc: "LEVEL 3 - This expert-level ITEC ESOL Certificate International at Level 3 provides the highest standard of English language training for students seeking professional and academic excellence. The course covers sophisticated linguistic analysis, advanced academic writing, and expert-level communication skills. Students will master complex language concepts, develop research and presentation capabilities, and achieve the language proficiency required for university study, professional leadership, and international career opportunities.",
-      img: getCourseImage('vtct', 10),
+      img: getCourseImage('vtct', 19),
+    },
+    {
+      id: 10,
+      title: "ITEC ESOL CERTIFICATE INTERNATIONAL",
+      desc: "LEVEL 1 B2 - This comprehensive ITEC ESOL Certificate International at Level 1 B2 provides upper-intermediate English language training for students seeking advanced communication proficiency. The course covers sophisticated grammar structures, extensive vocabulary development, and enhanced communication abilities across all four language skills. Students will engage with complex texts, develop academic writing skills, and build confidence in professional communication contexts.",
+      img: getCourseImage('vtct', 11),
+    },
+    {
+      id: 11,
+      title: "ITEC ESOL CERTIFICATE INTERNATIONAL",
+      desc: "LEVEL 2 C1 - This advanced ITEC ESOL Certificate International at Level 2 C1 provides high-level English language training for students seeking near-native proficiency. The course covers complex linguistic structures, advanced vocabulary expansion, and sophisticated communication techniques. Students will develop critical thinking skills, analytical writing abilities, and confident presentation skills for academic and professional excellence.",
+      img: getCourseImage('vtct', 12),
+    },
+    {
+      id: 12,
+      title: "ITEC ESOL CERTIFICATE INTERNATIONAL",
+      desc: "LEVEL 3 C2 - This expert-level ITEC ESOL Certificate International at Level 3 C2 provides the highest standard of English language proficiency for students seeking mastery-level communication skills. The course covers sophisticated linguistic analysis, advanced academic writing, and expert-level communication abilities. Students will achieve the language proficiency required for university study, professional leadership, and international career opportunities.",
+      img: getCourseImage('vtct', 2),
+    },
+    {
+      id: 13,
+      title: "FUNCTIONAL SKILLS ENGLISH",
+      desc: "LEVEL 1 - This comprehensive Functional Skills English at Level 1 provides intermediate English language training focusing on practical communication skills for everyday and workplace situations. The course covers reading comprehension, writing skills, speaking and listening abilities that are directly applicable to real-world contexts. Students will develop the language competencies needed for further education, employment opportunities, and effective participation in community life.",
+      img: getCourseImage('vtct', 14),
+    },
+    {
+      id: 14,
+      title: "FUNCTIONAL SKILLS MATHS",
+      desc: "LEVEL 2 - This advanced Functional Skills Maths at Level 2 provides comprehensive mathematical training focusing on practical problem-solving skills for everyday and workplace situations. The course covers numerical calculations, statistical analysis, algebraic manipulation, and geometric applications that are directly relevant to real-world contexts. Students will develop the mathematical competencies needed for further education, employment opportunities, and professional advancement.",
+      img: getCourseImage('vtct', 15),
+    },
+    {
+      id: 15,
+      title: "FUNCTIONAL SKILLS ENGLISH",
+      desc: "LEVEL 2 - This advanced Functional Skills English at Level 2 provides sophisticated communication training focusing on practical language skills for professional and academic contexts. The course covers advanced reading comprehension, complex writing tasks, confident speaking abilities, and critical listening skills. Students will develop the high-level language competencies needed for career advancement, further education, and leadership roles.",
+      img: getCourseImage('vtct', 16),
+    },
+    {
+      id: 16,
+      title: "FUNCTIONAL SKILLS MATHS",
+      desc: "LEVEL 2 - This advanced Functional Skills Maths at Level 2 provides comprehensive mathematical training focusing on practical problem-solving skills for professional and academic contexts. The course covers complex calculations, statistical analysis, algebraic problem-solving, and geometric applications. Students will develop the advanced mathematical competencies needed for career progression, higher education, and technical roles.",
+      img: getCourseImage('vtct', 17),
+    },
+    {
+      id: 17,
+      title: "Award in Invigilating Remote Tests and Examinations",
+      desc: "This specialized award provides comprehensive training for individuals seeking to become qualified invigilators for remote testing and examination environments. The course covers essential skills including digital platform management, remote monitoring techniques, security protocols, and student support procedures. Participants will learn about academic integrity, technical troubleshooting, and the unique challenges of online assessment environments. This qualification is essential for educational institutions, professional bodies, and organizations conducting remote examinations.",
+      img: getCourseImage('vtct', 18),
     },
   ],
 };

@@ -41,7 +41,7 @@ const Footer = () => {
                 opacity: "0.9",
               }}
             >
-              <strong className="text-dark">Phone: </strong>07507 500507
+              <strong className="text-dark">Phone: </strong>0141 526 5555
             </p>
             <p
               className=" mb-1"
@@ -51,7 +51,7 @@ const Footer = () => {
                 opacity: "0.9",
               }}
             >
-              <strong className="text-dark">WhatsApp: </strong>07507 500507
+              <strong className="text-dark">WhatsApp: </strong>0141 526 5555
             </p>
             <p
               className=" mb-3"
