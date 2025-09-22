@@ -4,7 +4,6 @@ import NavigationBar from "./components/Navbar";
 
 // Home Page Sections
 import Hero from "./components/Hero";
-import Partner from "./components/Partners";
 import About from "./components/About";
 import Courses from "./components/Courses";
 import Testimonials from "./components/Testimonials";
@@ -32,7 +31,6 @@ const App = () => {
           path="/"
           element={
             <>
-              <Partner />
               <Hero />
               <About />
               <Courses />

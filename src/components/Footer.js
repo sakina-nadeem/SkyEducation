@@ -41,7 +41,7 @@ const Footer = () => {
                 opacity: "0.9",
               }}
             >
-              <strong className="text-dark">Phone: </strong>0141 526 5555
+              <strong className="text-dark">Phone: </strong>0141 526 5555 / 07507 500507
             </p>
             <p
               className=" mb-1"

@@ -81,7 +81,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h6 className="fw-bold mb-1">WhatsApp</h6>
-                      <p className="mb-0 text-muted">0141 526 5555</p>
+                      <p className="mb-0 text-muted">07507 500507</p>
                     </div>
                   </div>
 

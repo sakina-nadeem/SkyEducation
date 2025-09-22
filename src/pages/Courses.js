@@ -179,7 +179,13 @@ const CoursesPage = () => {
                             bg={getCategoryBadgeColor()}
                             className="position-absolute top-0 end-0 m-2"
                           >
-                            {selectedCategory !== "ALL" ? selectedCategory : "Featured"}
+                            {(() => {
+                              // Special handling for the ICQ course that appears in SQA category
+                              if (course.id === 46 || course.title.includes("Introduction to the Role of the Professional Taxi")) {
+                                return "ICQ";
+                              }
+                              return selectedCategory !== "ALL" ? selectedCategory : "Featured";
+                            })()}
                           </Badge>
                         </div>
                         <Card.Body className="d-flex flex-column">

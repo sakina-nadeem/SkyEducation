@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../Assests/logo00.png";
 import "./home.css";
 
 function NavigationBar() {
   const [showCourses, setShowCourses] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const navigate = useNavigate();
 
   // Function to close mobile menu when navigation item is clicked
   const handleNavClick = () => {
@@ -124,29 +125,47 @@ function NavigationBar() {
                       <i className="fas fa-star me-2"></i>
                       Popular Courses
                     </h6>
-                    <NavDropdown.Item as={Link} to="/courses?category=PERSONS" className="popular-item" onClick={handleNavClick}>
+                    <NavDropdown.Item 
+                      onClick={() => {
+                        handleNavClick();
+                        navigate('/enroll', { state: { course: { id: 44, title: "Level 2 SQA: Professional Taxi & Private Hire Driver" } } });
+                      }} 
+                      className="popular-item"
+                    >
                       <div className="d-flex align-items-center">
                         
                         <div className="flex-grow-1">
-                          <div className="fw-semibold">Level 2 English</div>
+                          <div className="fw-semibold">Level 2 Professional Taxi Driver</div>
                           <small className="text-success">Most Popular</small>
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses?category=SEG" className="popular-item" onClick={handleNavClick}>
+                    <NavDropdown.Item 
+                      onClick={() => {
+                        handleNavClick();
+                        navigate('/enroll', { state: { course: { id: 45, title: "Level 5 SQA: Professional Taxi & Private Hire Driver Role" } } });
+                      }} 
+                      className="popular-item"
+                    >
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
-                          <div className="fw-semibold">MOT Class 4 & 7</div>
+                          <div className="fw-semibold">Level 5 Professional Driver Role</div>
                           <small className="text-info">High Demand</small>
                         </div>
                       </div>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/courses?category=ICQ" className="popular-item" onClick={handleNavClick}>
+                    <NavDropdown.Item 
+                      onClick={() => {
+                        handleNavClick();
+                        navigate('/enroll', { state: { course: { id: 46, title: "Introduction to the Role of the Professional Taxi and Private Hire" } } });
+                      }} 
+                      className="popular-item"
+                    >
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
-                          <div className="fw-semibold">Level 3 Education & Training</div>
+                          <div className="fw-semibold">Introduction to Professional Taxi</div>
                           <small className="text-warning">Trending</small>
                         </div>
                       </div>

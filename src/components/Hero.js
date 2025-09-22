@@ -6,12 +6,28 @@ import searchWhite from "../Assests/searchiconwhite.png";
 import courseData from "./CourseData";
 import "./home.css";
 
+// Partner logos
+import partner01 from "../Assests/partner01.png";
+import partner02 from "../Assests/partner02.png";
+import partner04 from "../Assests/partner04.png";
+import partner05 from "../Assests/partner05.png";
+import partner06 from "../Assests/partner06.png";
+
 function Hero() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedCourse, setSelectedCourse] = useState("");
   const [categorySearchTerm, setCategorySearchTerm] = useState("");
   const [courseSearchTerm, setCourseSearchTerm] = useState("");
   const navigate = useNavigate();
+
+  // Use unique logos only (remove duplicates)
+  const logos = [
+    partner01,
+    partner02,
+    partner04,
+    partner05,
+    partner06
+  ];
 
   const categories = [
     { key: "ALL", name: "All Courses" },
@@ -72,7 +88,7 @@ function Hero() {
     >
       <Container className="pt-5">
         <Row className="align-items-center overflow-hidden">
-          <Col md={7}>
+          <Col md={6}>
             <small
               className="text-uppercase d-flex align-items-center ls-1"
               style={{ fontSize: "11px" }}
@@ -93,6 +109,78 @@ function Hero() {
               <p className="mb-0 fw-bold" style={{ fontSize: "13px" }}>
                 ✓ We only deliver Ofqual regulated courses
               </p>
+            </div>
+          </Col>
+
+          <Col md={6} className="d-flex flex-column align-items-end justify-content-center">
+            {/* Accreditation Logos Section */}
+            <div className="mb-4">
+              <div className="text-center mb-3">
+                <p className="mb-0 text-light fw-medium" style={{ 
+                  fontSize: "14px", 
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  opacity: "0.9"
+                }}>
+                  ACCREDITED BY
+                </p>
+              </div>
+              
+              <div className="d-flex align-items-center justify-content-center">
+                <div
+                  className="d-grid partner-logos-container"
+                  style={{ 
+                    gridTemplateColumns: "repeat(2, 1fr)",
+                    gap: "0.8rem",
+                    padding: "10px 0",
+                    overflow: "visible",
+                    maxWidth: "250px"
+                  }}
+                >
+                  {logos.map((logo, idx) => (
+                    <div 
+                      key={idx} 
+                      className="partner-logo-wrapper"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "12px",
+                        borderRadius: "8px",
+                        transition: "all 0.3s ease",
+                        backgroundColor: "rgba(255, 255, 255, 0.95)",
+                        flexShrink: 0,
+                        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
+                        width: "100px",
+                        height: "65px"
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.05)";
+                        e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 1)";
+                        e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                        e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
+                        e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.1)";
+                      }}
+                    >
+                      <img
+                        src={logo}
+                        alt={`Accredited by Partner ${idx + 1}`}
+                        style={{
+                          maxHeight: "40px",
+                          maxWidth: "80px",
+                          width: "auto",
+                          height: "auto",
+                          objectFit: "contain",
+                          display: "block"
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </Col>
 
@@ -185,6 +273,7 @@ function Hero() {
             </Button>
           </div>
         </Row>
+
       </Container>
     </section>
   );
