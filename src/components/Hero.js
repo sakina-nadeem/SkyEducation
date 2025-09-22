@@ -114,7 +114,7 @@ function Hero() {
 
           <Col md={6} className="d-flex flex-column align-items-end justify-content-center">
             {/* Accreditation Logos Section */}
-            <div className="mb-4">
+            <div className="mb-4 mt-20">
               <div className="text-center mb-3">
                 <p className="mb-0 text-light fw-medium" style={{ 
                   fontSize: "14px", 

@@ -22,7 +22,7 @@ function Partner() {
     <section
       className="partners-section bg-white border-bottom"
       style={{ 
-        paddingTop: "100px", 
+        paddingTop: "180px", 
         paddingBottom: "20px",
         borderBottom: "1px solid #e9ecef",
         marginTop: "0px"
@@ -30,7 +30,7 @@ function Partner() {
     >
       <div className="container">
         {/* Partners Header */}
-        <div className="text-center mb-3">
+        <div className="text-center  mt-20 mb-3">
           <p className="mb-0 text-muted fw-medium" style={{ 
             fontSize: "14px", 
             letterSpacing: "1px",
@@ -43,12 +43,13 @@ function Partner() {
         {/* All Partners Container - Single Line */}
         <div className="d-flex align-items-center justify-content-center">
           <div
-            className="d-flex align-items-center justify-content-center flex-nowrap partner-logos-container"
+            className="d-flex align-items-center justify-content-center flex-nowrap"
             style={{ 
-              gap: "2rem",
+              gap: "clamp(0.5rem, 3vw, 2rem)",
               padding: "10px 0",
               maxWidth: "100%",
-              overflow: "hidden"
+              overflow: "hidden",
+              width: "100%"
             }}
           >
             {logos.map((logo, idx) => (
@@ -59,13 +60,15 @@ function Partner() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "10px",
+                  padding: "clamp(5px, 1vw, 10px)",
                   borderRadius: "8px",
                   transition: "all 0.3s ease",
                   filter: "grayscale(100%)",
                   opacity: "0.7",
                   backgroundColor: "transparent",
-                  flexShrink: 0
+                  flexShrink: 1,
+                  minWidth: 0,
+                  flex: "1 1 auto"
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.filter = "grayscale(0%)";
@@ -84,8 +87,8 @@ function Partner() {
                   src={logo}
                   alt={`Partner ${idx + 1}`}
                   style={{
-                    maxHeight: "50px",
-                    maxWidth: "110px",
+                    maxHeight: "clamp(30px, 5vw, 50px)",
+                    maxWidth: "clamp(70px, 12vw, 110px)",
                     width: "auto",
                     height: "auto",
                     objectFit: "contain"

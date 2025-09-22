@@ -61,22 +61,46 @@ const CoursesSection = () => {
         </p>
 
         {/* Category Buttons */}
-        <div className="d-flex flex-wrap justify-content-center gap-4 mb-4 mt-5">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => {
-                setActiveCategory(cat);
-                setStartIndex(0); // reset to first page when category changes
+        <div className="category-buttons-container mb-4 mt-5">
+          <div className="d-flex justify-content-center align-items-center position-relative">
+            <div 
+              className="category-buttons-wrapper d-flex gap-2 gap-md-3 gap-lg-4"
+              style={{
+                overflowX: "auto",
+                scrollBehavior: "smooth",
+                maxWidth: "100%",
+                padding: "10px 0",
+                scrollbarWidth: "none", // Firefox
+                msOverflowStyle: "none", // IE
+                WebkitScrollbar: "none" // Chrome/Safari
               }}
-              className={`btn px-3 py-2 fw-lighter ${
-                activeCategory === cat ? "active-btn " : "inactive-btn border-dark "
-              }`}
-              style={{ fontSize: "0.75rem" }}
             >
-              {cat}
-            </button>
-          ))}
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setActiveCategory(cat);
+                    setStartIndex(0); // reset to first page when category changes
+                  }}
+                  className={`btn px-3 py-2 fw-lighter flex-shrink-0 ${
+                    activeCategory === cat ? "active-btn " : "inactive-btn border-dark "
+                  }`}
+                  style={{ 
+                    fontSize: "0.75rem",
+                    whiteSpace: "nowrap",
+                    minWidth: "fit-content"
+                  }}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
+          <style jsx>{`
+            .category-buttons-wrapper::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
         </div>
 
         {/* Courses Grid with navigation icons */}
