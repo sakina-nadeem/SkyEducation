@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../Assests/logo00.png";
+import courseData from "./CourseData";
 import "./home.css";
 
 function NavigationBar() {
   const [showCourses, setShowCourses] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
+
+  // Get the actual SQA courses to ensure consistent navigation
+  const sqaCourses = courseData.SQA || [];
+  const course1 = sqaCourses.find(course => course.id === 1); // Level 2 SQA
+  const course2 = sqaCourses.find(course => course.id === 2); // Level 5 SQA  
+  const course3 = sqaCourses.find(course => course.id === 3); // BTEC Level 2 ICQ
 
   // Function to close mobile menu when navigation item is clicked
   const handleNavClick = () => {
@@ -128,7 +135,7 @@ function NavigationBar() {
                     <NavDropdown.Item 
                       onClick={() => {
                         handleNavClick();
-                        navigate('/enroll', { state: { course: { id: 44, title: "Level 2 SQA: Professional Taxi & Private Hire Driver (Wales)" } } });
+                        if (course1) navigate('/enroll', { state: { course: course1 } });
                       }} 
                       className="popular-item"
                     >
@@ -143,7 +150,7 @@ function NavigationBar() {
                     <NavDropdown.Item 
                       onClick={() => {
                         handleNavClick();
-                        navigate('/enroll', { state: { course: { id: 45, title: "Level 5 SQA: Professional Taxi & Private Hire Driver Role (Scotland)" } } });
+                        if (course2) navigate('/enroll', { state: { course: course2 } });
                       }} 
                       className="popular-item"
                     >
@@ -158,7 +165,7 @@ function NavigationBar() {
                     <NavDropdown.Item 
                       onClick={() => {
                         handleNavClick();
-                        navigate('/enroll', { state: { course: { id: 46, title: "Professional Taxi and Private Hire (United Kingdom)" } } });
+                        if (course3) navigate('/enroll', { state: { course: course3 } });
                       }} 
                       className="popular-item"
                     >
