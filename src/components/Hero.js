@@ -134,7 +134,7 @@ function Hero() {
                     gap: "0.8rem",
                     padding: "10px 0",
                     overflow: "visible",
-                    maxWidth: "250px"
+                    maxWidth: "350px"
                   }}
                 >
                   {logos.map((logo, idx) => (
@@ -145,14 +145,14 @@ function Hero() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        padding: "12px",
-                        borderRadius: "8px",
+                        padding: "20px",
+                        borderRadius: "12px",
                         transition: "all 0.3s ease",
                         backgroundColor: "rgba(255, 255, 255, 0.95)",
                         flexShrink: 0,
                         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-                        width: "100px",
-                        height: "65px"
+                        width: "150px",
+                        height: "100px"
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = "scale(1.05)";
@@ -169,8 +169,8 @@ function Hero() {
                         src={logo}
                         alt={`Accredited by Partner ${idx + 1}`}
                         style={{
-                          maxHeight: "40px",
-                          maxWidth: "80px",
+                          maxHeight: "65px",
+                          maxWidth: "130px",
                           width: "auto",
                           height: "auto",
                           objectFit: "contain",
