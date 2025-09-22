@@ -422,7 +422,12 @@ const courseData = {
       desc: "The Entry Level 3 English course prepares students for practical usage of English, focusing on developing skills to engage effectively in real-world communication tasks and social interactions. This course builds upon basic English skills, introducing more complex language structures, extended vocabulary, and varied communication scenarios. Students will practice reading different types of texts, writing for various purposes, speaking in different situations, and listening for specific information. The program emphasizes functional English skills that are directly applicable to everyday life, including completing forms, understanding instructions, participating in discussions, and expressing opinions clearly. Learning activities are designed to be engaging and relevant, helping students develop confidence in using English in community, workplace, and educational settings.",
       img: getCourseImage('persons', 8),
     },
-   
+  {
+      id: 40,
+      title: "Entry Level 1 English",
+      desc: "The Entry Level 1 English course lays the foundation for effective communication by introducing essential English speaking and writing skills in a supportive, encouraging learning environment. This beginner-level course is designed for learners who are new to English or returning to formal education after an extended break. Students will learn basic vocabulary, simple sentence structures, fundamental grammar concepts, and essential communication skills for everyday situations. The course covers basic reading skills, simple writing tasks, clear speaking practice, and listening for familiar information. Learning activities are practical and engaging, focusing on immediate communication needs such as introductions, basic conversations, simple instructions, and everyday vocabulary. Individual support and differentiated teaching methods ensure that every student can progress at their own pace while building confidence in English communication.",
+      img: getCourseImage("persons", 10),
+    },
     {
       id: 1,
       title: "Level 2 English",
@@ -700,6 +705,33 @@ const courseData = {
       title: "Award in Invigilating Remote Tests and Examinations",
       desc: "This specialized award provides comprehensive training for individuals seeking to become qualified invigilators for remote testing and examination environments. The course covers essential skills including digital platform management, remote monitoring techniques, security protocols, and student support procedures. Participants will learn about academic integrity, technical troubleshooting, and the unique challenges of online assessment environments. This qualification is essential for educational institutions, professional bodies, and organizations conducting remote examinations.",
       img: getCourseImage('vtct', 18),
+    },
+  ],
+
+  "FUNCTIONAL SKILLS": [
+    {
+      id: 1,
+      title: "LEVEL 1 - FUNCTIONAL SKILLS ENGLISH",
+      desc: "This comprehensive Functional Skills English at Level 1 provides intermediate English language training focusing on practical communication skills for everyday and workplace situations. The course covers reading comprehension, writing skills, speaking and listening abilities that are directly applicable to real-world contexts. Students will develop the language competencies needed for further education, employment opportunities, and effective participation in community life.",
+      img: getCourseImage('vtct', 14),
+    },
+    {
+      id: 2,
+      title: "LEVEL 2 - FUNCTIONAL SKILLS MATHS",
+      desc: "This advanced Functional Skills Maths at Level 2 provides comprehensive mathematical training focusing on practical problem-solving skills for everyday and workplace situations. The course covers numerical calculations, statistical analysis, algebraic manipulation, and geometric applications that are directly relevant to real-world contexts. Students will develop the mathematical competencies needed for further education, employment opportunities, and professional advancement.",
+      img: getCourseImage('vtct', 15),
+    },
+    {
+      id: 3,
+      title: "LEVEL 2 - FUNCTIONAL SKILLS ENGLISH",
+      desc: "This advanced Functional Skills English at Level 2 provides sophisticated communication training focusing on practical language skills for professional and academic contexts. The course covers advanced reading comprehension, complex writing tasks, confident speaking abilities, and critical listening skills. Students will develop the high-level language competencies needed for career advancement, further education, and leadership roles.",
+      img: getCourseImage('vtct', 16),
+    },
+    {
+      id: 4,
+      title: "LEVEL 2 - FUNCTIONAL SKILLS MATHS",
+      desc: "This advanced Functional Skills Maths at Level 2 provides comprehensive mathematical training focusing on practical problem-solving skills for professional and academic contexts. The course covers complex calculations, statistical analysis, algebraic problem-solving, and geometric applications. Students will develop the advanced mathematical competencies needed for career progression, higher education, and technical roles.",
+      img: getCourseImage('vtct', 17),
     },
   ],
 };

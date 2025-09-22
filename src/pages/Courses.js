@@ -35,6 +35,7 @@ const CoursesPage = () => {
     { key: "PRO QUAL", name: "Security & Safety", count: courseData["PRO QUAL"].length },
     { key: "SQA", name: "Taxi & Private Hire", count: courseData.SQA.length },
     { key: "ICQ", name: "Education & Training", count: courseData.ICQ.length },
+    { key: "FUNCTIONAL SKILLS", name: "Functional Skills", count: courseData["FUNCTIONAL SKILLS"].length },
   ];
 
   const filteredAndSortedCourses = useMemo(() => {

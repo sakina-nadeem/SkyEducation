@@ -126,6 +126,15 @@ function NavigationBar() {
                         </div>
                       </div>
                     </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/courses?category=FUNCTIONAL SKILLS" className="category-item" onClick={handleNavClick}>
+                      <div className="d-flex align-items-center">
+                       
+                        <div className="flex-grow-1">
+                          <div className="fw-semibold">Functional Skills</div>
+                          <small className="text-muted">Practical English and Maths skills</small>
+                        </div>
+                      </div>
+                    </NavDropdown.Item>
                   </div>
                   <div className="col-md-6">
                     <h6 className="dropdown-header text-primary fw-bold mb-1">
