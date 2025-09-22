@@ -158,7 +158,7 @@ function NavigationBar() {
                     <NavDropdown.Item 
                       onClick={() => {
                         handleNavClick();
-                        navigate('/enroll', { state: { course: { id: 46, title: "Introduction to the Role of the Professional Taxi and Private Hire (United Kingdom)" } } });
+                        navigate('/enroll', { state: { course: { id: 46, title: "Professional Taxi and Private Hire (United Kingdom)" } } });
                       }} 
                       className="popular-item"
                     >

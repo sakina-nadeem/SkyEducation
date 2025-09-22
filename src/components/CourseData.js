@@ -312,7 +312,7 @@ const courseData = {
     },
     {
       id: 46,
-      title: "Introduction to the Role of the Professional Taxi and Private Hire(United Kingdom)",
+      title: "BTEC Level 2 ICQ: Professional Taxi and Private Hire (United Kingdom)",
       desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
       img: getCourseImage('icq', 1),
     },
@@ -519,7 +519,7 @@ const courseData = {
     },
     {
       id: 3,
-      title: "Introduction to the Role of the Professional Taxi and Private Hire (United Kingdom)",
+      title: "BTEC Level 2 ICQ: Professional Taxi and Private Hire (United Kingdom)",
       desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
       img: getCourseImage('sqa', 1),
     },
@@ -546,7 +546,7 @@ const courseData = {
     },
     {
       id: 46,
-      title: "Introduction to the Role of the Professional Taxi and Private Hire (United Kingdom)",
+      title: "BTEC Level 2 ICQ: Professional Taxi and Private Hire (United Kingdom)",
       desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
       img: getCourseImage('icq', 1),
     },
