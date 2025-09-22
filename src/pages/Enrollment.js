@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Card, Form, Button, Alert } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Form,
+  Button,
+  Alert,
+} from "react-bootstrap";
 import { useLocation, Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import contactImg from "../Assests/contactimg.png";
 import mailIcon from "../Assests/mailicon.png";
 import "./enrollment.css";
 
 const EnrollmentPage = () => {
   const location = useLocation();
   const courseData = location.state?.course;
-  
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,7 +26,7 @@ const EnrollmentPage = () => {
     previousEducation: "",
     message: "",
     hearAboutUs: "",
-    terms: false
+    terms: false,
   });
 
   const [showAlert, setShowAlert] = useState(false);
@@ -28,15 +35,15 @@ const EnrollmentPage = () => {
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!formData.terms) {
       setAlertType("danger");
       setAlertMessage("Please accept the terms and conditions to continue.");
@@ -44,25 +51,41 @@ const EnrollmentPage = () => {
       return;
     }
 
-    // Simulate form submission
-    setAlertType("success");
-    setAlertMessage("Thank you for your enrollment application! We'll contact you within 24 hours.");
-    setShowAlert(true);
-    
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      course: courseData?.title || "",
-      previousEducation: "",
-      message: "",
-      hearAboutUs: "",
-      terms: false
-    });
+    try {
+      const response = await fetch("https://formspree.io/f/mwprejkv", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    // Hide alert after 5 seconds
+      if (response.ok) {
+        setAlertType("success");
+        setAlertMessage(
+          "Thank you for your enrollment application! We'll contact you within 24 hours."
+        );
+        setShowAlert(true);
+
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          course: courseData?.title || "",
+          previousEducation: "",
+          message: "",
+          hearAboutUs: "",
+          terms: false,
+        });
+      } else {
+        throw new Error("Failed to send form");
+      }
+    } catch (error) {
+      setAlertType("danger");
+      setAlertMessage("Something went wrong. Please try again later.");
+      setShowAlert(true);
+    }
+
     setTimeout(() => setShowAlert(false), 5000);
   };
 
@@ -78,7 +101,10 @@ const EnrollmentPage = () => {
             </p>
             {courseData && (
               <div className="mt-4">
-                <Card className="course-summary-card mx-auto" style={{ maxWidth: "600px" }}>
+                <Card
+                  className="course-summary-card mx-auto"
+                  style={{ maxWidth: "600px" }}
+                >
                   <Card.Body className="text-center">
                     <h5 className="fw-bold text-dark mb-2">Selected Course</h5>
                     <h4 className="text-primary mb-2">{courseData.title}</h4>
@@ -90,7 +116,11 @@ const EnrollmentPage = () => {
           </div>
 
           {showAlert && (
-            <Alert variant={alertType} dismissible onClose={() => setShowAlert(false)}>
+            <Alert
+              variant={alertType}
+              dismissible
+              onClose={() => setShowAlert(false)}
+            >
               {alertMessage}
             </Alert>
           )}
@@ -101,16 +131,18 @@ const EnrollmentPage = () => {
               <Card className="h-100 shadow-sm border-0">
                 <Card.Body className="p-4">
                   <h4 className="fw-bold text-primary mb-4">Get In Touch</h4>
-                  
+
                   <div className="contact-item mb-4">
                     <div className="d-flex align-items-center mb-2">
                       <i className="fas fa-map-marker-alt text-primary me-3"></i>
                       <h6 className="fw-bold mb-0">Address</h6>
                     </div>
                     <p className="text-muted ms-4">
-                      281 Barlow Moor Road <br />
-                     Chorlton Manchester <br />
-                    M21 7GH
+                     281 Barlow Moor Road 
+                      <br />
+                     Chorlton Manchester 
+                      <br />
+                M21 7GH
                     </p>
                   </div>
 
@@ -121,6 +153,17 @@ const EnrollmentPage = () => {
                     </div>
                     <p className="text-muted ms-4">
                       <a href="tel:+4401415265555" className="text-decoration-none text-muted">
+                  0141 526 5555
+                      </a>
+                    </p>
+                  </div>
+                      <div className="contact-item mb-4">
+                    <div className="d-flex align-items-center mb-2">
+                      <i className="fas fa-phone text-primary me-3"></i>
+                      <h6 className="fw-bold mb-0">WhatsApp</h6>
+                    </div>
+                    <p className="text-muted ms-4">
+                      <a href="tel:+4401415265555" className="text-decoration-none text-muted">
                      07507 500507
                       </a>
                     </p>
@@ -128,11 +171,19 @@ const EnrollmentPage = () => {
 
                   <div className="contact-item mb-4">
                     <div className="d-flex align-items-center mb-2">
-                      <img src={mailIcon} alt="email" width="16" className="me-3" />
+                      <img
+                        src={mailIcon}
+                        alt="email"
+                        width="16"
+                        className="me-3"
+                      />
                       <h6 className="fw-bold mb-0">Email</h6>
                     </div>
                     <p className="text-muted ms-4">
-                      <a href="mailto:info@skyeducationltd.com" className="text-decoration-none text-muted">
+                      <a
+                        href="mailto:info@skyeducationltd.com"
+                        className="text-decoration-none text-muted"
+                      >
                         info@skyeducationltd.com
                       </a>
                     </p>
@@ -144,14 +195,12 @@ const EnrollmentPage = () => {
                       <h6 className="fw-bold mb-0">Office Hours</h6>
                     </div>
                     <p className="text-muted ms-4">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 10:00 AM - 4:00 PM<br />
+                      Monday - Friday: 9:00 AM - 6:00 PM
+                      <br />
+                      Saturday: 10:00 AM - 4:00 PM
+                      <br />
                       Sunday: Closed
                     </p>
-                  </div>
-
-                  <div className="mt-4">
-                    
                   </div>
                 </Card.Body>
               </Card>
@@ -161,13 +210,17 @@ const EnrollmentPage = () => {
             <Col lg={8}>
               <Card className="shadow-sm border-0">
                 <Card.Body className="p-4">
-                  <h4 className="fw-bold text-primary mb-4">Enrollment Application</h4>
-                  
+                  <h4 className="fw-bold text-primary mb-4">
+                    Enrollment Application
+                  </h4>
+
                   <Form onSubmit={handleSubmit}>
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label className="fw-medium">First Name *</Form.Label>
+                          <Form.Label className="fw-medium">
+                            First Name *
+                          </Form.Label>
                           <Form.Control
                             type="text"
                             name="firstName"
@@ -180,7 +233,9 @@ const EnrollmentPage = () => {
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label className="fw-medium">Last Name *</Form.Label>
+                          <Form.Label className="fw-medium">
+                            Last Name *
+                          </Form.Label>
                           <Form.Control
                             type="text"
                             name="lastName"
@@ -196,7 +251,9 @@ const EnrollmentPage = () => {
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label className="fw-medium">Email Address *</Form.Label>
+                          <Form.Label className="fw-medium">
+                            Email Address *
+                          </Form.Label>
                           <Form.Control
                             type="email"
                             name="email"
@@ -209,7 +266,9 @@ const EnrollmentPage = () => {
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label className="fw-medium">Phone Number *</Form.Label>
+                          <Form.Label className="fw-medium">
+                            Phone Number *
+                          </Form.Label>
                           <Form.Control
                             type="tel"
                             name="phone"
@@ -223,7 +282,9 @@ const EnrollmentPage = () => {
                     </Row>
 
                     <Form.Group className="mb-3">
-                      <Form.Label className="fw-medium">Course of Interest *</Form.Label>
+                      <Form.Label className="fw-medium">
+                        Course of Interest *
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         name="course"
@@ -234,9 +295,10 @@ const EnrollmentPage = () => {
                       />
                     </Form.Group>
 
-
                     <Form.Group className="mb-3">
-                      <Form.Label className="fw-medium">Previous Education/Experience</Form.Label>
+                      <Form.Label className="fw-medium">
+                        Previous Education/Experience
+                      </Form.Label>
                       <Form.Control
                         as="textarea"
                         rows={3}
@@ -248,7 +310,9 @@ const EnrollmentPage = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                      <Form.Label className="fw-medium">How did you hear about us?</Form.Label>
+                      <Form.Label className="fw-medium">
+                        How did you hear about us?
+                      </Form.Label>
                       <Form.Select
                         name="hearAboutUs"
                         value={formData.hearAboutUs}
@@ -265,7 +329,9 @@ const EnrollmentPage = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-4">
-                      <Form.Label className="fw-medium">Additional Message</Form.Label>
+                      <Form.Label className="fw-medium">
+                        Additional Message
+                      </Form.Label>
                       <Form.Control
                         as="textarea"
                         rows={4}
@@ -285,9 +351,20 @@ const EnrollmentPage = () => {
                         label={
                           <span>
                             I agree to the{" "}
-                            <Link to="/terms" className="text-primary text-decoration-none">Terms and Conditions</Link>
-                            {" "}and{" "}
-                            <Link to="/privacy" className="text-primary text-decoration-none">Privacy Policy</Link> *
+                            <Link
+                              to="/terms"
+                              className="text-primary text-decoration-none"
+                            >
+                              Terms and Conditions
+                            </Link>{" "}
+                            and{" "}
+                            <Link
+                              to="/privacy"
+                              className="text-primary text-decoration-none"
+                            >
+                              Privacy Policy
+                            </Link>{" "}
+                            *
                           </span>
                         }
                         required
@@ -295,8 +372,8 @@ const EnrollmentPage = () => {
                     </Form.Group>
 
                     <div className="text-center">
-                      <Button 
-                        type="submit" 
+                      <Button
+                        type="submit"
                         className="enroll-btn px-5 py-3"
                         size="lg"
                       >
