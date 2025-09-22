@@ -108,9 +108,9 @@ const EnrollmentPage = () => {
                       <h6 className="fw-bold mb-0">Address</h6>
                     </div>
                     <p className="text-muted ms-4">
-                      123 Education Street<br />
-                      Learning District<br />
-                      London, UK SW1A 1AA
+                      281 Barlow Moor Road <br />
+                     Chorlton Manchester <br />
+                    M21 7GH
                     </p>
                   </div>
 
@@ -121,7 +121,7 @@ const EnrollmentPage = () => {
                     </div>
                     <p className="text-muted ms-4">
                       <a href="tel:+4401415265555" className="text-decoration-none text-muted">
-                        0141 526 5555
+                     07507 500507
                       </a>
                     </p>
                   </div>

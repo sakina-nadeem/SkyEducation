@@ -15,7 +15,7 @@ function NavigationBar() {
   const icqCourses = courseData.ICQ || [];
   const course1 = sqaCourses.find(course => course.id === 1); // Level 2 SQA
   const course2 = sqaCourses.find(course => course.id === 2); // Level 5 SQA  
-  const course3 = icqCourses.find(course => course.id === 3); // BTEC Level 2 ICQ
+  const course3 = sqaCourses.find(course => course.id === 3); // BTEC Level 2 ICQ
 
   // Function to close mobile menu when navigation item is clicked
   const handleNavClick = () => {

@@ -526,16 +526,16 @@ const courseData = {
       desc: "The Level 5 SQA Professional Taxi & Private Hire Driver Role course provides advanced comprehensive knowledge for experienced drivers seeking to excel in the passenger transport sector, covering sophisticated customer care strategies, advanced safety protocols, and detailed industry regulations. This higher-level qualification explores complex aspects of professional driving including advanced route optimization, customer relationship management, business development principles, and leadership skills for those aspiring to supervisory or training roles. Students will develop expertise in handling challenging situations, providing specialized services for different passenger groups, and understanding the commercial aspects of the taxi and private hire industry. The course includes advanced communication techniques, conflict resolution strategies, and the development of professional networks within the transport industry.",
       img: getCourseImage('sqa', 2),
     },
-   
-  ],
-
-  ICQ: [
-     {
+   {
       id: 3,
       title: "BTEC Level 2 ICQ: Professional Taxi and Private Hire (Sheffield)",
       desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
       img: getCourseImage('sqa', 1),
     },
+  ],
+
+  ICQ: [
+     
     {
       id: 2,
       title: "Level 3 Award in Education & Training",

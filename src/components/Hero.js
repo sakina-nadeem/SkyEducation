@@ -83,10 +83,10 @@ function Hero() {
   };
   return (
     <section
-      className="hero-section text-light d-flex align-items-center position-relative"
+      className="hero-section text-light  pt-20 d-flex align-items-center position-relative"
       style={{ backgroundColor: "#02AEF1", width: "100vw", marginLeft: "calc(-50vw + 50%)" }} // 👈 updated styles
     >
-      <Container className="pt-5">
+      <Container className="pt-20">
         <Row className="align-items-center overflow-hidden">
           <Col md={6}>
             <small
