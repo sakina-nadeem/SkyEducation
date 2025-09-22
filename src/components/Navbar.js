@@ -128,7 +128,7 @@ function NavigationBar() {
                     <NavDropdown.Item 
                       onClick={() => {
                         handleNavClick();
-                        navigate('/enroll', { state: { course: { id: 44, title: "Level 2 SQA: Professional Taxi & Private Hire Driver" } } });
+                        navigate('/enroll', { state: { course: { id: 44, title: "Level 2 SQA: Professional Taxi & Private Hire Driver (Wales)" } } });
                       }} 
                       className="popular-item"
                     >
@@ -143,7 +143,7 @@ function NavigationBar() {
                     <NavDropdown.Item 
                       onClick={() => {
                         handleNavClick();
-                        navigate('/enroll', { state: { course: { id: 45, title: "Level 5 SQA: Professional Taxi & Private Hire Driver Role" } } });
+                        navigate('/enroll', { state: { course: { id: 45, title: "Level 5 SQA: Professional Taxi & Private Hire Driver Role (Scotland)" } } });
                       }} 
                       className="popular-item"
                     >
@@ -158,7 +158,7 @@ function NavigationBar() {
                     <NavDropdown.Item 
                       onClick={() => {
                         handleNavClick();
-                        navigate('/enroll', { state: { course: { id: 46, title: "Introduction to the Role of the Professional Taxi and Private Hire" } } });
+                        navigate('/enroll', { state: { course: { id: 46, title: "Introduction to the Role of the Professional Taxi and Private Hire (United Kingdom)" } } });
                       }} 
                       className="popular-item"
                     >

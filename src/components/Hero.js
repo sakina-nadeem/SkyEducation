@@ -106,7 +106,7 @@ function Hero() {
               and beauty to public services and education.
             </p>
             <div className="mt-3 p-2 bg-light text-dark rounded-2 d-inline-block">
-              <p className="mb-0 fw-bold" style={{ fontSize: "13px" }}>
+              <p className="mb-0 fw-bold" style={{ fontSize: "20px" }}>
                 ✓ We only deliver Ofqual regulated courses
               </p>
             </div>
