@@ -10,11 +10,12 @@ function NavigationBar() {
   const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
 
-  // Get the actual SQA courses to ensure consistent navigation
+  // Get the actual SQA and ICQ courses to ensure consistent navigation
   const sqaCourses = courseData.SQA || [];
+  const icqCourses = courseData.ICQ || [];
   const course1 = sqaCourses.find(course => course.id === 1); // Level 2 SQA
   const course2 = sqaCourses.find(course => course.id === 2); // Level 5 SQA  
-  const course3 = sqaCourses.find(course => course.id === 3); // BTEC Level 2 ICQ
+  const course3 = icqCourses.find(course => course.id === 3); // BTEC Level 2 ICQ
 
   // Function to close mobile menu when navigation item is clicked
   const handleNavClick = () => {
@@ -151,7 +152,10 @@ function NavigationBar() {
                       <div className="d-flex align-items-center">
                         
                         <div className="flex-grow-1">
-                          <div className="fw-semibold">Level 2 Professional Taxi Driver</div>
+                          <div className="fw-semibold">Level 2 SQA</div>
+                           <div className="fw-semibold">Professional Taxi & Private Hire</div>
+                                                      <div className="fw-semibold">Driver (Wales)</div>
+                                           
                           <small className="text-success">Most Popular</small>
                         </div>
                       </div>
@@ -166,7 +170,9 @@ function NavigationBar() {
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
-                          <div className="fw-semibold">Level 5 Professional Driver Role</div>
+                          <div className="fw-semibold">Level 5 SQA: Professional </div>
+                                                    <div className="fw-semibold">Taxi & Private Hire Driver Role</div>
+                                                                              <div className="fw-semibold">(Scotland)</div>
                           <small className="text-info">High Demand</small>
                         </div>
                       </div>
@@ -181,7 +187,9 @@ function NavigationBar() {
                       <div className="d-flex align-items-center">
                        
                         <div className="flex-grow-1">
-                          <div className="fw-semibold">Introduction to Professional Taxi</div>
+                          <div className="fw-semibold">BTEC Level 2 ICQ:</div>
+                                                    <div className="fw-semibold">Professional Taxi and Private </div>
+                                                                              <div className="fw-semibold">Hire (Sheffield)</div>
                           <small className="text-warning">Trending</small>
                         </div>
                       </div>
