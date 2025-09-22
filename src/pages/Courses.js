@@ -181,8 +181,9 @@ const CoursesPage = () => {
                             className="position-absolute top-0 end-0 m-2"
                           >
                             {(() => {
-                              // Special handling for the ICQ course that appears in SQA category
-                              if (course.id === 46 || course.title.includes("Introduction to the Role of the Professional Taxi")) {
+                              // Special handling for ICQ courses that appear in SQA category
+                              if (course.id === 46 || course.title.includes("Introduction to the Role of the Professional Taxi") || 
+                                  course.title.includes("BTEC Level 2 ICQ") || course.title.includes("ICQ")) {
                                 return "ICQ";
                               }
                               return selectedCategory !== "ALL" ? selectedCategory : "Featured";
