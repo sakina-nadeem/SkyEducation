@@ -88,66 +88,67 @@ const courseData = {
 
 
     // PERSONS - English & Math Courses (English courses first with IDs 36-40, then Maths with IDs 31-35)
-    {
+  {
       id: 36,
       title: "Level 2 English",
       desc: "The Level 2 English course is designed to develop fluent communication skills suitable for diverse personal, educational, and professional contexts, significantly enhancing both spoken and written English capabilities. This comprehensive program covers advanced grammar structures, vocabulary expansion, critical reading skills, and sophisticated writing techniques. Students will engage with various text types including literature, reports, articles, and creative writing, developing analytical and interpretative skills. The course emphasizes effective communication in different contexts, presentation skills, and the ability to adapt language and style to suit specific audiences and purposes. Practical activities include essay writing, oral presentations, group discussions, and creative projects that build confidence and competency in English language use at an advanced level.",
-      img: getCourseImage('persons', 6),
+      img: getCourseImage("persons", 6),
     },
     {
       id: 37,
       title: "Level 1 English",
       desc: "The Level 1 English course helps students refine their command of English, developing independent communication skills suitable for both professional and personal contexts. This intermediate-level program focuses on improving written and spoken English through structured learning activities, grammar development, and vocabulary expansion. Students will work with different text types, practice formal and informal writing styles, and develop confidence in speaking and listening skills. The course covers essential communication skills including letter writing, report preparation, reading comprehension, and verbal communication techniques. Emphasis is placed on developing critical thinking skills, understanding different writing purposes, and building the language competencies needed for further education, employment opportunities, and effective participation in community life.",
-      img: getCourseImage('persons', 7),
+      img: getCourseImage("persons", 7),
     },
     {
       id: 38,
       title: "Entry Level 3 English",
       desc: "The Entry Level 3 English course prepares students for practical usage of English, focusing on developing skills to engage effectively in real-world communication tasks and social interactions. This course builds upon basic English skills, introducing more complex language structures, extended vocabulary, and varied communication scenarios. Students will practice reading different types of texts, writing for various purposes, speaking in different situations, and listening for specific information. The program emphasizes functional English skills that are directly applicable to everyday life, including completing forms, understanding instructions, participating in discussions, and expressing opinions clearly. Learning activities are designed to be engaging and relevant, helping students develop confidence in using English in community, workplace, and educational settings.",
-      img: getCourseImage('persons', 8),
+      img: getCourseImage("persons", 8),
     },
     {
       id: 39,
       title: "Entry Level 2 English",
       desc: "The Entry Level 2 English course focuses on enhancing basic communication skills through improved vocabulary development and structured sentence formation, building upon foundational English knowledge. Students will work on expanding their word knowledge, understanding basic grammar rules, and developing more complex communication abilities. The course covers reading simple texts, writing basic sentences and paragraphs, speaking clearly in familiar situations, and listening to understand key information. Learning activities include vocabulary building exercises, guided writing tasks, structured conversation practice, and reading comprehension activities using accessible texts. The supportive learning environment encourages students to practice their English skills confidently, with emphasis on practical communication that can be immediately applied in daily life situations.",
-      img: getCourseImage('persons', 9),
+      img: getCourseImage("persons", 9),
     },
     {
       id: 40,
       title: "Entry Level 1 English",
       desc: "The Entry Level 1 English course lays the foundation for effective communication by introducing essential English speaking and writing skills in a supportive, encouraging learning environment. This beginner-level course is designed for learners who are new to English or returning to formal education after an extended break. Students will learn basic vocabulary, simple sentence structures, fundamental grammar concepts, and essential communication skills for everyday situations. The course covers basic reading skills, simple writing tasks, clear speaking practice, and listening for familiar information. Learning activities are practical and engaging, focusing on immediate communication needs such as introductions, basic conversations, simple instructions, and everyday vocabulary. Individual support and differentiated teaching methods ensure that every student can progress at their own pace while building confidence in English communication.",
-      img: getCourseImage('persons', 10),
+      img: getCourseImage("persons", 10),
     },
     {
       id: 31,
       title: "Level 2 Maths",
       desc: "The Level 2 Maths course provides students with an in-depth exploration of advanced mathematical concepts and methods designed to challenge and develop sophisticated problem-solving skills. This comprehensive program covers algebraic manipulation, geometric principles, statistical analysis, and mathematical reasoning. Students will work with complex equations, graphical representations, probability calculations, and data interpretation. The course is designed to bridge the gap between basic mathematical understanding and higher-level mathematical applications required in professional and academic contexts. Emphasis is placed on developing analytical thinking, logical reasoning, and the ability to apply mathematical concepts to real-world situations. Upon completion, students will have the mathematical competency equivalent to a GCSE grade 4-9, opening pathways to further education, apprenticeships, and career opportunities in fields requiring strong numerical skills.",
-      img: getCourseImage('persons', 2),
+      img: getCourseImage("persons", 2),
     },
     {
       id: 32,
       title: "Level 1 Maths",
       desc: "The Level 1 Maths course provides students with a thorough understanding of fundamental mathematical principles, focusing on basic algebra, proportions, statistics, and practical mathematical applications. This intermediate-level program builds upon entry-level mathematics, introducing more complex concepts while maintaining accessibility for learners developing their mathematical confidence. Students will work with fractions, decimals, percentages, basic algebraic expressions, and introductory statistical concepts. The course emphasizes practical applications of mathematics in everyday situations, workplace contexts, and preparation for further mathematical study. Learning activities include problem-solving exercises, data handling projects, and real-world mathematical scenarios that demonstrate the relevance and importance of mathematical skills in personal and professional life.",
-      img: getCourseImage('persons', 2),
+      img: getCourseImage("persons", 2),
     },
     {
       id: 33,
       title: "Entry Level 3 Maths",
       desc: "The Entry Level 3 Maths course is designed to develop students' ability to handle mathematical information and concepts independently, with a strong focus on practical applications in everyday life and work situations. This course bridges the gap between basic numeracy and more advanced mathematical study, providing learners with the confidence and skills needed to tackle mathematical challenges. Students will work with number operations, basic geometry, data handling, and measurement concepts through engaging, real-world contexts. The program emphasizes building mathematical confidence, developing logical thinking skills, and understanding how mathematics applies to daily activities such as budgeting, shopping, cooking, and workplace tasks. Assessment methods are designed to be supportive and encouraging, helping students recognize their mathematical achievements and progress.",
-      img: getCourseImage('persons', 3),
+      img: getCourseImage("persons", 3),
     },
     {
       id: 34,
       title: "Entry Level 2 Maths",
       desc: "The Entry Level 2 Maths course builds upon foundational mathematical concepts, introducing new topics including fractions, basic measurements, and elementary problem-solving techniques for everyday applications. This supportive learning environment helps students develop mathematical confidence while working with practical scenarios that demonstrate the relevance of mathematics in daily life. Students will explore number relationships, simple calculations, basic shapes and space concepts, and introductory data handling through hands-on activities and real-world examples. The course focuses on developing mathematical vocabulary, understanding numerical relationships, and building the foundation skills necessary for progression to higher levels of mathematical study. Teaching methods emphasize practical application, visual learning aids, and collaborative problem-solving to ensure all students can achieve success.",
-      img: getCourseImage('persons', 4),
+      img: getCourseImage("persons", 4),
     },
     {
       id: 35,
       title: "Entry Level 1 Maths",
       desc: "The Entry Level 1 Maths course provides a supportive introduction to basic mathematical concepts and practical skills essential for daily life activities, designed specifically for learners who are beginning their mathematical journey or returning to education after a break. This foundational course covers fundamental number work, basic counting, simple calculations, recognition of shapes, and introductory measurement concepts through engaging, practical activities. Students will work with money calculations, time concepts, basic data collection, and simple problem-solving in familiar contexts. The learning environment is designed to be encouraging and non-threatening, with emphasis placed on building confidence, developing mathematical language, and recognizing mathematical concepts in everyday situations. Individual support and differentiated learning approaches ensure that every student can achieve personal success and progress.",
-      img: getCourseImage('persons', 5),
+      img: getCourseImage("persons", 5),
     },
+
 
     // PRO QUAL - Security & Safety Courses
     {
