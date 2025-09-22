@@ -546,12 +546,6 @@ const courseData = {
       img: getCourseImage('icq', 4),
     },
     {
-      id: 46,
-      title: "BTEC Level 2 ICQ: Professional Taxi and Private Hire (Sheffield)",
-      desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom. The program covers fundamental aspects of professional driving including customer service principles, industry regulations, safety protocols, and professional conduct standards. Students will gain knowledge of licensing requirements, vehicle maintenance basics, passenger interaction skills, and the legal framework governing taxi and private hire operations. The course emphasizes developing professional attitudes, understanding service quality expectations, and building confidence in providing safe, reliable transportation services. This qualification serves as an ideal starting point for individuals seeking to enter the passenger transport sector with a solid foundation of industry knowledge and professional competencies.",
-      img: getCourseImage('icq', 1),
-    },
-    {
       id: 5,
       title: "LEVEL 3 - Award in Education and Training",
       desc: "This Level 3 Award in Education and Training provides comprehensive foundation training for individuals entering the education and training sector. The course covers essential teaching principles, learning theories, and practical training delivery methods. Students will develop skills in session planning, learner engagement, and basic assessment techniques. This qualification is ideal for new trainers, workplace mentors, and those seeking to develop their training capabilities in professional environments.",
